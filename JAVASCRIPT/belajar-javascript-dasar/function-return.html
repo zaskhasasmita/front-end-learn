@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tambahkan(angka1, angka2) {
+            return angka1 + angka2
+        }
+        hasil = tambahkan(1, 2);
+        console.log(hasil);
+
+        // logika lebih kompleks
+        function hitungDiskon(harga, diskon) {
+            let penguranganDiskon = harga * diskon / 100;
+            let hasil = harga - penguranganDiskon;
+            return hasil;
+        }
+        
+        const hargaBarang = 100000;
+        const diskonBarang = 20;
+        const terjual = hitungDiskon(hargaBarang,diskonBarang);
+
+        console.log(`
+        harga asli : Rp.${hargaBarang}
+        diskon :${diskonBarang}%
+        menjadi : Rp.${terjual},-`)
+
+
+
+    </script>
+</body>
+</html>

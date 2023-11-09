@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/calc.css">
+        <style>
+            .calc{
+    width: 300px;
+    background: #eaeaea;
+    margin: 50px auto 0px auto;
+    padding: 7px;
+    border-radius: 5px;
+}
+.container-button{
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn{
+    display: flex;
+    background-color: white;
+    width: 25%;
+    font-size: 20px;
+    color:grey;
+    font-weight: bold;
+    height: 70px;
+    border: 1px solid #cecece;
+    border-top: none;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+.btn:nth-child(4n+1){
+    border-left: 1px solid #cecece;
+}
+.btn:hover{
+    background: #e4e4e4;
+}
+#btn-operator{
+    background: #dddbdb;
+}
+#btn-operator:hover{
+    background: #f0f0f0;
+}
+#screen{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #cecece;
+    font-size: 25px;
+    font-weight: bold;
+    color: grey;
+    padding: 21px 7px;
+    margin: auto 5px 5px auto;
+    text-align: right;
+    outline: none;
+}
+#zero{
+    flex-grow: 1;
+}
+#equals{
+    background: #ff8104;
+    color: white;
+}
+#equals:hover{
+    background: #ffa64a;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="calc">
+            <!-- Input layar kalkulator -->
+            <input type="text" id="screen">
+            <div class="container-button">
+                <!-- Tombol kalkulator -->
+                <!-- Tombol operator C (Clear), Bkspc (Backspace), . (Titik), dan / (Pembagian) -->
+                <span class="btn" id="btn-operator">C</span>
+                <span class="btn" id="btn-operator">Bkspc</span>
+                <span class="btn" id="btn-operator">.</span>
+                <span class="btn" id="btn-operator">/</span>
+                <!-- Tombol angka 0-9 -->
+                <span class="btn">7</span>
+                <span class="btn">8</span>
+                <span class="btn">9</span>
+                <span class="btn" id="btn-operator">*</span>
+                <span class="btn">4</span>
+                <span class="btn">5</span>
+                <span class="btn">6</span>
+                <span class="btn" id="btn-operator">+</span>
+                <span class="btn">1</span>
+                <span class="btn">2</span>
+                <span class="btn">3</span>
+                <span class="btn" id="btn-operator">-</span>
+                <!-- Tombol angka 0, 00, dan = (Sama Dengan) -->
+                <span class="btn" id="zero">0</span>
+                <span class="btn">00</span>
+                <span class="btn" id="equals">=</span>
+            </div>
+        </div>
+        <script>
+            // Mengambil elemen-elemen dari DOM
+            var btn = document.querySelector(".container-button");
+            var screen = document.querySelector("#screen");
+            var resetscreen = false;
+            var calculate = false;
+    
+            // Menambahkan event listener untuk klik pada elemen-elemen tombol
+            btn.addEventListener("click", function(e){
+                var btnClick = e.target;
+                var valuebtn = btnClick.innerText;
+    
+                // Tombol "C" untuk membersihkan layar
+                if (valuebtn == "C"){
+                    screen.value = "";
+                }
+                // Tombol "Bkspc" untuk menghapus karakter terakhir dari layar
+                else if(valuebtn == "Bkspc"){
+                    screen.value = screen.value.slice(0, -1);
+                }
+                // Tombol "=" untuk menghitung hasil ekspresi matematika
+                else if(valuebtn == "="){
+                    if(calculate == true){
+                        screen.value = eval(tmpval + operator + screen.value);
+                        calculate = false;
+                    } else if (calculate == false && screen.value == "" ){
+                        alert("Anda belum memasukkan angka atau operasi matematika.");
+                        resetscreen = true;
+                    }
+                    screen.value = eval(screen.value);
+                }
+                // Tombol operator untuk operasi matematika (+, -, *, /)
+                else if (btnClick.classList.contains('operator')){
+                    if(calculate == true){
+                        screen.value = eval(tmpval + operator + screen.value);
+                    }
+                    tmpval = screen.value;
+                    operator = valuebtn;
+                    resetscreen = true;
+                } else {
+                    // Tombol angka
+                    if(resetscreen == true){
+                        screen.value = valuebtn;
+                    }
+                    screen.value = screen.value + valuebtn;
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="ubah()">UBAH</button> <br>
+        <p>satu</p>
+        <p>dua</p>
+        <p>asd</p>
+        <p>duqwdxqa</p>
+        <p>ducqawca</p>
+        <p>ducwaca</p>
+        <p>rbfesdua</p>
+        <p>duqacwaa</p>
+        <h1 id="judul">Gambar JPG</h1>
+        <input type="text" name="text" disabled value="ubah?">
+        <h2 id="ipen">ini event</h2>
+        
+        <br><img src="ulc4g.jpg" width="300px" alt=""> 
+
+        <script>
+            function ubahWarnaMerah(tosss) {
+                tosss.style.color = "blue";
+            }
+            function ubah() {
+                document.querySelectorAll('p:nth-child(odd)').forEach(ubahWarnaMerah);
+                document.querySelector('img').src = "ulc4g-png.png";
+                document.getElementById('judul').textContent = "Berubah Jadi PNG";
+                document.getElementsByName('text')[0].setAttribute('value', 'yaa berubahhhhhh');
+            }
+
+        </script>
+    </body>
+    </html>

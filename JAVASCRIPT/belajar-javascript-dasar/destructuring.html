@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+</head>
+<body>
+    <script>
+        
+        {
+            const name = ['zaskha','d','sasmita','rahma','wahyyu', 'agus'];
+            // const namaDepan = name[0];
+            // const namaTengah = name[1];
+            // const namaBelakang = name[2];
+
+            // const [namaDepan, namaTengah, namaBelakang, ...lainya] = name
+            let [namaDepan, namaTengah, namaBelakang, ...lainya] = name
+
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaBelakang);
+            console.info(lainya)
+        }
+
+        {
+            const person = {
+                firstName: 'zaskha',
+                lastName: 'sasmita',
+                address : {
+                    street : 'belum ada',
+                    city : 'Banung',
+                    country : 'indo'
+                },
+                hobby : 'game',
+                channerl : 'bang jek dot kom'
+            }
+
+            // let {firstName, lastName, address, ...lainya} = person;
+            // console.info(firstName);
+            // console.info(lastName);
+            // console.info(address);
+            // console.info(lainya);
+
+            //nested
+            let {firstName, lastName, address:{street, city, country}, ...lainya} = person;
+            console.info(firstName);
+            console.info(lastName);
+            console.info(street);
+            console.info(city);
+            console.info(country);
+            console.info(lainya);
+        }
+
+        {
+            function displayKendaraan({nama, merk, tahun}) {
+                console.log(nama);
+                console.log(merk);
+                console.log(tahun);
+            }
+
+            const kendaraan =  {
+                nama : 'motor',
+                merk : 'suzuki',
+                tahun : '2012'
+            };
+            displayKendaraan(kendaraan)
+        }
+       
+        {
+            function sum([angka1, angka2]) {
+                return angka1 + angka2
+            }
+            console.info(sum([40,30]))
+        }
+
+        {
+            const names = ['rahma', 'ayu'];
+            const [firstName, middleName, lastName = 'juliawati'] = names;
+
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        {
+            const names = {
+                namaDepan : 'zaskha',
+                namaBelakang : 'Sasmita'
+            };
+
+            const {namaDepan, namaBelakang, namaPanggilan = 'jek'} = names;
+
+            console.log(namaDepan);
+            console.log(namaBelakang);
+            console.log(namaPanggilan);
+        }
+
+        {
+            const names = {
+                namaDepan : 'zaskha',
+                namaBelakang : 'Sasmita'
+            };
+
+            let {namaDepan :firstName, 
+                namaBelakang : lastName} = names;
+
+            console.log(firstName);
+            console.log(lastName);
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

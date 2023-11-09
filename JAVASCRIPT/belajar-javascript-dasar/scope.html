@@ -1,0 +1,27 @@
+<script>
+    // ini namanya global scope
+
+    function hitMe() { // tapi si fungsi hitMe ini masuk ke global scope
+        // ini local scope si hitMe
+    }
+
+    function other() {
+        // ini local scope si other
+        hitMe(); // jadi bisa diakses disini
+    }
+
+
+    function first() {
+        let firstVar = "thisis firstvar";
+        console.log(firstVar)
+    }
+    function second() {
+        let secondVar = "thisis secondvar";
+        console.log(secondVar)
+    }
+
+    first();
+    second();
+    console.log(firstVar);
+    console.log(secondVar);
+</script>

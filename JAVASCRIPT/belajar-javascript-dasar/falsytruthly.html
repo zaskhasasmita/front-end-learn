@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fT</title>
+</head>
+<body>
+    <script>
+
+        //data data falsy
+         /*
+         
+        false = boolea false
+        0, -0 = number 0 dan -0 dianggap false
+        "", '', `` = semua string kosong dianggap false
+        null = null dianggap false
+        undifined = dianggap false
+        NaN = Not a Number di anggap false
+         
+         */
+
+         // Data-data yang dianggap truthy
+        /*
+        - Semua angka selain 0 dianggap true
+        - Semua string yang tidak kosong dianggap true
+        - Objek dan array, bahkan jika kosong, dianggap true
+        - Semua fungsi dianggap true
+        */
+
+        // Contoh "truthy" dengan if dan else:
+        const angka = 42;
+        if (angka) {
+            console.log("Ini adalah nilai truthy.");
+        } else {
+            console.log("Ini adalah nilai falsy.");
+        }
+
+        const teks = "Hello, world!";
+        if (teks) {
+            console.log("Ini adalah nilai truthy.");
+        } else {
+            console.log("Ini adalah nilai falsy.");
+        }
+
+        const objekKosong = {};
+        if (objekKosong) {
+            console.log("Ini adalah nilai truthy.");
+        } else {
+            console.log("Ini adalah nilai falsy.");
+        }
+
+        function contohFungsi() {
+            return "Saya adalah fungsi.";
+        }
+        if (contohFungsi) {
+            console.log("Ini adalah nilai truthy.");
+        } else {
+            console.log("Ini adalah nilai falsy.");
+        }
+
+        // Contoh "falsy" dengan if dan else:
+        const angkaNol = 0;
+        if (angkaNol) {
+            console.log("Ini adalah nilai truthy.");
+        } else {
+            console.log("Ini adalah nilai falsy.");
+        }
+
+        const stringKosong = "";
+        if (stringKosong) {
+            console.log("Ini adalah nilai truthy.");
+        } else {
+            console.log("Ini adalah nilai falsy.");
+        }
+
+        const nolNegatif = -0;
+        if (nolNegatif) {
+            console.log("Ini adalah nilai truthy.");
+        } else {
+            console.log("Ini adalah nilai falsy.");
+        }
+
+        const nilaiNull = null;
+        if (nilaiNull) {
+            console.log("Ini adalah nilai truthy.");
+        } else {
+            console.log("Ini adalah nilai falsy.");
+        }
+
+        const nilaiUndefined = undefined;
+        if (nilaiUndefined) {
+            console.log("Ini adalah nilai truthy.");
+        } else {
+            console.log("Ini adalah nilai falsy.");
+        }
+
+        const nilaiNaN = NaN;
+        if (nilaiNaN) {
+            console.log("Ini adalah nilai truthy.");
+        } else {
+            console.log("Ini adalah nilai falsy.");
+        }
+
+
+
+    </script>
+</body>
+</html>

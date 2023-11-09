@@ -1,0 +1,1 @@
+document.writeln("Halu Bang Jekk")

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of</title>
+</head>
+<body>
+    <script>
+        const person = ["Zaskha", "Riki", "Bayyin", "Agungg"];
+
+        for(const nama of person) {
+            document.writeln(`${nama}<br>`);
+        }
+
+        // Studi Kasus: Menghitung total nilai dari sebuah array
+
+        const nilai = [85, 92, 78, 88, 95];
+        let total = 0;
+
+        for (const skor of nilai) {
+            total += skor;
+        }
+
+        const rataRata = total / nilai.length;
+
+        console.log(`Total nilai: ${total}`);
+        console.log(`Rata-rata: ${rataRata}`);
+
+
+    </script>
+</body>
+</html>

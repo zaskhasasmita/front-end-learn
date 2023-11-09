@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in</title>
+</head>
+<body>
+    <script>
+        const person = {
+            nama: 'Zaskha',
+            Umur: 20,
+            alamat: 'indonesia'
+        }
+
+        // Menggunakan loop "for...in" untuk mengulangi seluruh properti dalam objek "person"
+        for (i in person) {
+            // Mencetak properti beserta nilainya ke dalam dokumen HTML
+            document.writeln(`Properti dari ${i} adalah: ${person[i]} <br>`);
+        }
+
+
+        const car = {
+            brand: 'Toyota',
+            model: 'Camry',
+            year: 2022
+        }
+
+        for (property in car) {
+            console.log(`Car's ${property} is: ${car[property]}`);
+        }
+
+        const student = {
+            nama : [
+                 'Zaskha',
+                 'Riki',
+                 'bayyin',
+                 'agung',
+                 'Rahma'
+             ]
+        }
+        for (const j in student.nama) {
+            console.log(student.nama[j]);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String & number</title>
+</head>
+<body>
+    <script>
+
+        const value1 = "1";
+        const value2 = 1;
+        const sum = value1 + value2;
+
+        document.writeln(`Hasilnya : ${sum}`)
+
+        // melakukan konversi String dan number
+
+        /* 
+            parseInt(string)    mengkonversi dari string ke number (bilangan bulat)
+            parseFloat(string)  mengkonversi dari string ke integer(bilangan pecahan) 
+            Number(String)      Mengkonversi dari string ke number (bilangan bulat atau pecahan)
+            number.toString()   mengkonversi dari Number ke String        
+        */
+
+        const a = parseInt("1");
+        const b = 1;
+
+        const sum2 = a + b;
+        document.writeln(`Hasilnya : ${sum2}<br>`);
+
+        const keString = a.toString() + b.toString();
+        
+        document.writeln(`${parseInt("1.1")}<br>`);
+        document.writeln(`${parseFloat("1.1")}<br>`);
+        document.writeln(`${Number("1.1")}<br>`);
+        document.writeln(`${keString} <br>`);
+        
+        
+        document.writeln(`${parseInt("salah")}<br>`);
+        document.writeln(`${parseFloat("1.1jek")}<br>`);
+        document.writeln(`${parseFloat("jek1.1")}<br>`);
+        document.writeln(`${Number("1.1zas")}<br>`);
+        document.writeln(`${Number("zas1.1")}<br>`);
+        
+        const first = Number("salaaaaa");
+        
+        document.writeln(`${isNaN(100)}<br>`);
+        document.writeln(`${isNaN(first)}<br>`);
+
+
+
+    </script>
+</body>
+</html>

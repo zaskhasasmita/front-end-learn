@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffad;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+        }
+        #lampu {
+            width: 100%;
+        }
+        .con-tombol {
+            width: 200px;
+            height: 80px;
+            margin: auto;
+        }
+        #tombol {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif ;
+            font-weight: bold;
+            font-size: 30px;
+            border: none;
+            border-radius: 16px;
+            background-color: lightblue;
+            color: #023a4d;
+            cursor: pointer;
+        }
+        #tombol:active {
+            background-color: #739aa7 ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg version="1.1" id="lampu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+            <g>
+                <path id="pill" style="fill:rgb(255, 255, 0);" d="M1175,401c0-118.741-96.258-215-214.999-215c-118.688,0-214.444,95.286-214.998,213.973
+                    c-0.232,49.753,16.438,95.601,44.599,132.139C823.824,576.515,843,630.664,843,686.725v3.811C843,702.39,852.61,712,864.464,712
+                    h191.071c11.854,0,21.464-9.61,21.464-21.464v-3.026c0-55.741,18.038-110.218,52.398-154.109
+                    C1157.968,496.904,1175,450.943,1175,401z"/>
+                <g>
+                    <polygon style="fill:#898989;" points="1006,522 1006,510 971,510 948,510 913,510 913,522 948,522 948,546 932,546 932,712 
+                        987,712 987,546 971,546 971,522 		"/>
+                    <rect x="913" y="522" style="fill:#CE5800;" width="9" height="156"/>
+                    <rect x="997" y="522" style="fill:#CE5800;" width="9" height="156"/>
+                </g>
+                <path style="fill:#2B2B2B;" d="M1041.679,894H877.321C867.203,894,859,885.797,859,875.679V730.321
+                    c0-10.119,8.203-18.321,18.321-18.321h164.357c10.119,0,18.321,8.203,18.321,18.321v145.357
+                    C1060,885.797,1051.797,894,1041.679,894z"/>
+            </g>
+        </svg>
+    </div>
+    <div class="con-tombol">
+        <button onclick="flip()" id="tombol">OFF</button>
+    </div>
+    <div class="con-tombol">
+        <img src="" alt="">
+    </div>
+
+    <script>
+
+function flip() {
+    var lampu = document.getElementById("pill");
+    var body = document.querySelector("body");
+
+    // Periksa apakah lampu sudah menyala
+    if (lampu.style.fill === "rgb(255, 255, 0)") {
+        // Matikan lampu (ubah warna lampu menjadi abu-abu dan latar belakang menjadi gelap)
+        lampu.style.fill = "rgb(100, 100, 100)";
+        body.style.backgroundColor = "#4d4d4d";
+        document.getElementById("tombol").innerText = "ON";
+    } else {
+        // Hidupkan lampu (ubah warna lampu menjadi kuning dan latar belakang menjadi terang)
+        lampu.style.fill = "#FFFF00";
+        body.style.backgroundColor = "#FFFFAD";
+        document.getElementById("tombol").innerText = "OFF";
+    }
+}
+
+document.getele
+
+    </script>
+    
+</body>
+</html>

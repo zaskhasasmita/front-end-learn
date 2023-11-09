@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recursive function</title>
+</head>
+<body>
+    
+    <script>
+
+        //paktorial
+        // function factorial(value) {
+        //     let result = 1;
+        //     for (let i = 1; i <= value; i++) {
+        //         result *= i;
+        //     }
+        //     return result;
+        // }
+
+        // console.info(factorial(5));
+        // console.info(1*2*3*4*5)
+
+        function facRec(value) {
+            if(value === 0) {
+                return 1;
+            } else {
+                return value * facRec(value-1) ;
+            }
+        }
+        console.info(facRec(123))
+
+        function fibonacci(n) {
+        if (n <= 0) {
+            return 0; // Basis: Fibonacci(0) adalah 0
+        } else if (n === 1) {
+            return 1; // Basis: Fibonacci(1) adalah 1
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2); // Rekursi: Fibonacci(n) adalah Fibonacci(n-1) + Fibonacci(n-2)
+        }
+        }
+
+        // Menghitung 10 angka pertama dalam deret Fibonacci
+        for (let i = 0; i < 10; i++) {
+        console.log(fibonacci(i));
+        }
+
+    </script>
+
+</body>
+</html>

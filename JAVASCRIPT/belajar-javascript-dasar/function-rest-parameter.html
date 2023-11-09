@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function rest parameter</title>
+</head>
+<body>
+    <script>
+
+        function sum(name, ...data) {
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            console.info(`Total ${name} is ${total}`);
+        }
+
+        sum('apel', 2,1,6,4,1,3,7,4,7,4,2);
+
+        // Fungsi Matematika dalam Proyek Perhitungan Keuangan
+        function hitungTotalPajak(...nilai) {
+            return nilai.reduce((total, nilaiItem) => total + (nilaiItem * 0.1), 0);
+        }
+
+        const totalPajak = hitungTotalPajak(100, 200, 300);
+        console.log(totalPajak); // Output: 60
+
+
+
+        //sprea syntax
+
+        totall = [10,10,10,10,10];
+        sum('pisang', ...totall)
+
+    </script>
+</body>
+</html>

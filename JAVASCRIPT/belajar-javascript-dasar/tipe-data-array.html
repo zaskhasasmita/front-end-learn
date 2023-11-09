@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe data array</title>
+</head>
+<body>
+    <script>
+        
+        let arrayKosong = [];
+
+        let arrayNama = ['Zaskha', 'Bayyin', 'Riki'];
+
+        // menambah data
+        const arrNames = [];
+        arrNames.push("Zaskha");
+        arrNames.push("Rahma", "Karin", "Irna");
+        arrNames.push('Nabila', 'Fauzan', 'Aurel');
+        console.table(arrNames);
+
+        
+        //operasi di array
+        /*
+        array.push(value)       Menambahkan data ke array
+        array.length            untuk mendapatkan panjang array
+        array[index]            Mendapatkan data di posisi index
+        array[index] = value    mengubah data di posisi index
+        delete array[index]     menghapus data di posisi index, namun index tidak bergeser
+        */
+
+        // mendapatkan panjang array
+        console.info(arrNames.length);
+
+        //mendapatkan data di posisi index
+        console.info(`${arrNames[0]} dan ${arrNames[1]}`);
+        console.info(`${arrNames[2]} vs ${arrNames[3]}`);
+
+        //mengubah data di posisi index 
+        console.info('asalnya ' + arrNames[6]); // asalnya index ke 6 aurel
+        arrNames[6] = 'Decky';
+        console.info('menjadi ' + arrNames[6]); // berubah menjadi decky
+
+        // menghapus array
+        delete arrNames[5];
+        console.log('delete index ke 5 (Fauzan)')
+        console.table(arrNames);
+        
+        
+        //tidak ada batasan untuk tipedata array
+        arrNames.push(1, 2, 3, 4, 5);
+        arrNames.push(123837012021);
+        arrNames.push(10.12);
+        arrNames.push(true, false);
+        arrNames.push('b');
+        console.table(arrNames);
+
+        // array di dalam array
+        let arr2D = [];
+        arr2D.push(
+            ["Zaskha", "Bayyin", "Riki"],
+            [10, 20, 30],
+            [9.960, 9.940, 9.920],
+            [true, true, false],
+            // array 3d (array di dalam array di dalam array)
+            [
+                ["Zaskha", "Bayyin", "Riki"],
+                [10, 20, 30],
+                [9.960, 9.940, 9.920],
+                [true, true, false]
+            ]
+        );
+        console.table(arr2D);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika</title>
+</head>
+<body>
+    <script>
+         /*
+        
+                &&  Dan
+                ||  Atau
+                !   Kebalikan
+
+                
+                Operator &&
+                true && true    = true
+                true && false   = false
+                false && true   = false
+                false && false  = false
+                
+                Operator ||
+                true && true    = true
+                true && false   = true
+                false && true   = true
+                false && false  = false
+
+                Operator !
+                !true  = false
+                !false = true
+
+        */ 
+        document.writeln("<textarea cols='50' rows='20'>");
+
+
+        const nilaiUjian = 70;
+        const nilaiAbsensi = 80;
+
+        const lulusUjian = nilaiUjian > 75;
+        document.writeln("lulus ujian? : " + lulusUjian);
+        const lulusAbsensi = nilaiAbsensi > 75;
+        document.writeln("lulus Absensi? : " + lulusAbsensi);
+
+        const lulus = lulusAbsensi && lulusUjian;
+        document.writeln("lulus? " + lulus);
+     
+
+        document.writeln("</textarea>");
+
+
+    </script>
+</body>
+</html>

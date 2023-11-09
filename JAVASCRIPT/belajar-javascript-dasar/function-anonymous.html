@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anonymous function</title>
+</head>
+<body>
+    <button id="tombol">tombol</button>
+    <script>
+
+
+        function giveMeName(callback) {
+            callback('zaskha')
+        }
+
+        giveMeName( function(name){
+            console.log(`halo ${name}`);
+        });
+
+
+
+        // let say = function(name) {
+        //     console.log(`halo ${name}`);
+        // }
+
+        // say('Zasss');
+
+
+
+        // // Fungsi yang menerima callback dan menjalankannya.
+        // function jalankanCallback(callback) {
+        //     callback();
+        // }
+        // jalaninCall = function() {
+        //     console.log('Ini adalah anonymous function.');
+        // }
+        // // Menggunakan anonymous function sebagai callback.
+        // jalankanCallback(jalaninCall);
+
+
+
+
+        // alertKlik = function() {
+        //     alert('Tombol diklik!');
+        // }
+        // // Menambahkan event listener dengan anonymous function.
+        // document.getElementById('tombol').addEventListener('click', alertKlik);
+
+
+        
+        // // Contoh fungsi yang menerima callback sebagai argumen.
+        // function pesanMakanan(makanan, alamatPengiriman, perjalanan, callback) {
+        //     console.log(`Pesanan ${makanan} diterima.`);
+        //     console.log(`Alamat pengiriman: ${alamatPengiriman}`);
+            
+        //     //memanggil fungsi perjalanan
+        //     setTimeout(function() {
+        //         console.log(`Pesanan ${makanan} dalam perjalanan`);
+        //         perjalanan();
+        //     }, 1500);
+
+        //     // Simulasi pengiriman pesanan.
+        //     setTimeout(function() {
+        //         console.log(`Pesanan ${makanan} dikirim.`);
+        //         callback();
+        //     }, 3000); 
+
+        // }
+
+        // //dalam perjalanan
+        
+        
+
+        // // Memanggil fungsi pesanMakanan dengan makanan, alamat, dan callback.
+        // pesanMakanan(
+        //     'Pizza', 
+        //     'Jalan Raya No. 123', 
+        //     function() {
+        //         console.log('Pesanan dalam perjalanan');
+        //     },  
+        //     function() {
+        //         console.log('Pesanan telah tiba!');
+        //     }
+        // );
+
+        // function filterGanjil(array, callback) {
+        //     const hasilFilter = [];
+        //     for(let i = 0; i  < array.length; i++) {
+        //         if(callback(array[i])) {
+        //             hasilFilter.push(array[i]);
+        //         }
+        //     }
+        //     return hasilFilter;
+        // }
+        // const ganjil = filterGanjil([1,2,3,4,5,6,7,8,9,10], function(item){
+        //     return item % 2 !== 0;
+        // }); 
+
+        // console.log(ganjil); //output yg diharapkan:  [1,3,7,9];
+
+
+        // function konversiHurufBesar(array, callback) {
+        //     // Implementasikan kode di sini.
+        //     const hasilKonv = [];
+        //     for(let i = 0; i < array.length; i++) {
+        //         hasilKonv.push(callback(array[i]));
+        //     }
+
+        //     return hasilKonv;
+        // }
+
+        // const kataKecil = ["apel", "pisang", "jeruk", "mangga"];
+        // const kataBesar = konversiHurufBesar(kataKecil, function(kata) {
+        //     return kata.toUpperCase();
+        // });
+
+        // console.log(kataBesar); // Output yang diharapkan: ["APEL", "PISANG", "JERUK", "MANGGA"]
+
+
+        // function totalNilai(array, callback) {
+        //     // Implementasikan kode di sini.
+        //     let total = 0;
+        //     for (let i = 0; i < array.length; i++) {
+        //         total = callback(total, array[i]);
+        //     }
+        //     return total;
+            
+        // }
+
+        // const angka = [1, 2, 3, 4, 5];
+        // const total = totalNilai(angka, function(accumulator, item) {
+        //     return accumulator + item;
+        // }, 0);
+
+        // console.log(total); // Output yang diharapkan: 15
+
+
+
+
+        // function filterArray(array, callback) {
+        //     // Implementasikan kode di sini.
+        //    let hasil = [];
+        //    for (let i = 0; i < array.length; i++) {
+        //         if(callback(array[i])) {
+        //             hasil.push(array[i])
+        //         }
+        //    }
+        //    return hasil;
+        // }
+
+        // const angka = [10, 15, 20, 25, 30];
+        // const hasilFilter = filterArray(angka, function(item) {
+        //     return item <= 20;
+        // });
+
+        // console.log(hasilFilter); // Output yang diharapkan: [25, 30]
+
+    
+        
+
+        // function operasiArray(array, callback) {
+        //     // Implementasikan kode di sini.
+        //     hasil = [];
+        //     for (let i = 0; i < array.length; i++) {
+        //         hasil.push(callback(array[i]));
+        //     }
+        //     return hasil
+        // }
+
+        // const angka = [3, 5, 7, 9, 11];
+        // const hasilOperasi = operasiArray(angka, function(item) {
+        //     return item * 2;
+        // });
+
+        // console.log(hasilOperasi); // Output yang diharapkan: [6, 10, 14, 18, 22]
+
+
+
+        // function kelolaArray(array, callback) {
+        //     hasil = [];
+        //     for (let i = 0; i < array.length; i++) {
+        //         hasil.push(callback(array[i]));
+        //     }
+        //     return hasil;
+        // }
+
+        // const angka = [2, 4, 6, 8, 10];
+        // const hasilKelola = kelolaArray(angka, function(item) {
+        //     return item * 3;
+        // });
+
+        // console.log(hasilKelola); // Output yang diharapkan: [6, 12, 18, 24, 30]
+
+        // function buatGaleriGambar(gambar, callback) {
+        //     // Implementasikan kode di sini.
+        //     const hasil = [];
+        //     for (let i = 0; i < gambar.length; i++) {
+        //         hasil.push(callback(gambar[i]));
+                
+        //     }
+        //     return hasil;
+        // }
+
+        // const daftarGambar = [
+        //     'gambar1.jpg',
+        //     'gambar2.jpg',
+        //     'gambar3.jpg',
+        //     'gambar4.jpg'
+        // ];
+
+        // const galeriHTML = buatGaleriGambar(daftarGambar, function(gambar) {
+        //     return `<img src="${gambar}" alt="Gambar ${gambar}"><br>`;
+        // });
+
+        // document.writeln(galeriHTML);
+
+        // function filterProduk(daftarProduk, callback) {
+        //     // Implementasikan kode di sini.
+        //     const hasil = daftarProduk.filter(callback);
+        //     return hasil;
+        // }
+
+        // const produk = [
+        //     { nama: 'Laptop', kategori: 'Elektronik', harga: 800 },
+        //     { nama: 'Kemeja', kategori: 'Fashion', harga: 25 },
+        //     { nama: 'Buku', kategori: 'Buku', harga: 10 },
+        //     { nama: 'Kamera', kategori: 'Elektronik', harga: 500 },
+        // ];
+
+        // const produkElektronik = filterProduk(produk, function(item) {
+        //     return item.kategori === 'Elektronik';
+        // });
+
+        // console.log(produkElektronik);
+
+        //     const daftarUser = [
+        //         {id : 1, nama : 'zaskha'},
+        //         {id : 2, nama : 'Riki'},
+        //         {id : 3, nama : 'bayyin'}
+        //     ]
+            
+        //     function prosesDaftarUser(user, callbackUser) {
+        //         for(let i = 0; i < user.length; i++) {
+        //             callbackUser(user[i]);
+        //         }
+        //     }
+
+        //     function sapaDia(user) {
+        //         console.log(`Halo ${user.nama}`);
+        //     }
+
+
+        //    prosesDaftarUser(daftarUser, sapaDia);
+
+
+    </script>
+</body>
+</html>

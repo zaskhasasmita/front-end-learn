@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <script>
+        // Definisikan fungsi sayHello yang menerima satu parameter "name".
+        function sayHello(name) {
+            console.log(`halo ${name}`);
+        }
+
+        // Buat variabel "say" dan inisialisasi dengan fungsi sayHello.
+        let say = sayHello;
+
+        // Panggil fungsi sayHello dengan argumen 'Zaskha'.
+        sayHello('Zaskha'); // Output: "halo Zaskha"
+
+        // Panggil variabel "say" yang sebelumnya diinisialisasi dengan fungsi sayHello dengan argumen 'Rahma'.
+        say('Rahma'); // Output: "halo Rahma"
+
+
+        function giveMeName(callback) {
+            callback("dziban");
+        }
+
+        giveMeName(sayHello);
+        giveMeName(say);
+
+    </script>
+</body>
+</html>

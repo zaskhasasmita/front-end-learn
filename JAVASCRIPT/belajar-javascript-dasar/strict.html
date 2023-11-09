@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strict</title>
+</head>
+<body>
+    <script>
+        function useStrictMode() {
+            'use strict';
+            const person = {
+                namaDepan : 'Zaskha'
+            }
+            with (person) {
+                console.info(namaDepan);
+            }
+        }
+
+        useStrictMode();
+    </script>
+    
+
+</body>
+</html>

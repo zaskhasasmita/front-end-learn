@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+
+        const barang = {};
+        const person = {
+            nama : "zaskha",
+            'nama ekhem' : "Rahma",
+            alamat : "indonesia",
+            umur : 22,
+            gender : 'L'
+        };
+        console.table(person);
+        
+        // menambah atau mengubah
+        barang.harga = 20.000;
+        barang["merk"] = "oskadon";
+        barang.modal = "gaada";
+        barang["populer"] = "ngga";
+        console.table(barang);
+
+        // menghapus
+        delete barang["populer"];
+        delete barang.modal;
+        console.table(barang);
+
+        //cara akses properti objek 
+        console.info(`Namanya adalah ${person.nama} dan berumur ${person.umur} tahun. saat ini dia tinggal di ${person.alamat}`);
+        console.info(person.nama);
+        console.info(person['nama']);
+        console.info(person['nama ekhem']);
+
+        // ini saya nanya ke chat gpt dan katanya gini
+        /*
+            Cara penulisan objek dan penambahan properti dalam JavaScript memang dapat bervariasi, 
+            namun ada perbedaan penting dalam notasi yang Anda gunakan:
+
+            1. Notasi objek literal:
+            - Cara mendefinisikan objek: `{ merk: "oskadon" }`
+            - Cara menambahkan properti: `barang.harga = 20000;`
+
+            2. Notasi tanda kurung siku (square bracket notation):
+            - Cara mendefinisikan objek: `{ ["merk"]: "oskadon" }`
+            - Cara menambahkan properti: `barang['harga'] = 20000;`
+
+            3. Notasi dengan operator penugasan:
+            - Cara mendefinisikan objek: `barang.merk = "oskadon"`
+            - Cara menambahkan properti: `barang.harga = 20000;`
+
+            Sementara notasi pertama dan kedua digunakan ketika Anda ingin menggunakan 
+            kunci properti sebagai string atau mengambil kunci dari ekspresi, 
+            notasi ketiga adalah notasi umum yang digunakan saat Anda mengetahui nama properti secara pasti.
+
+            Semua tiga notasi di atas akan membuat objek dengan properti yang sama, 
+            tetapi notasi yang digunakan bisa bermakna berbeda tergantung pada 
+            konteks penggunaan dan kebutuhan Anda dalam kode. Yang terpenting adalah 
+            memilih notasi yang paling sesuai dengan kasus penggunaan Anda.
+        */
+
+        //coba coba hehe.
+
+        const motor = {};
+
+        motor.merk = 'suzuki';
+        motor.rangka = 'kuat';
+
+        delete motor.rangka;
+
+        console.table(motor);
+
+    </script>
+</body>
+</html>

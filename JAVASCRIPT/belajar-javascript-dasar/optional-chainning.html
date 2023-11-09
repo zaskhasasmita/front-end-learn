@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oC</title>
+</head>
+<body>
+    <script>
+
+        // Optional Chainning
+        const produk = {
+            pakaian : {
+                baju : 'batik' ,
+                celana : 'jeans'
+            },
+            device : {
+                laptop : 'asus',
+                hape : 'ipong'
+            }
+        }
+
+        let baju = produk?.pakaian?.baju;
+
+        document.writeln('Sukses')
+        
+        document.writeln(`<P>ini ${baju}</P>`);
+
+        document.writeln('sukses')
+
+    </script>
+</body>
+</html>

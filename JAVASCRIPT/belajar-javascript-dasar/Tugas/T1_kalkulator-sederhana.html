@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+    <input type="text" id="nomor1">
+    <select name="" id="oprasi">
+        <option value="tambah">+</option>
+        <option value="kurang">-</option>
+        <option value="kali">X</option>
+        <option value="bagi">:</option>
+    </select>
+    <input type="text" id="nomor2">
+    <button onclick="hasil()">=</button>
+    <input type="text" name="" id="hasil" disabled>
+
+    <script>
+
+        function hasil () {
+            const nomor1 = parseFloat(document.getElementById('nomor1').value);
+            const nomor2 = parseFloat(document.getElementById('nomor2').value);
+            const oprasi = document.getElementById('oprasi').value;
+
+            let hasil;
+            // validasi
+            if(isNaN(nomor1) || isNaN(nomor2)) {
+                document.getElementById('hasil').value = "tolong masukan angka";
+                return;
+            }
+
+            if(oprasi === 'tambah') {
+                hasil = nomor1 + nomor2;
+            } else if(oprasi === 'kurang') {
+                hasil = nomor1 - nomor2;
+            } else if(oprasi === 'kali') {
+                hasil = nomor1 * nomor2;
+            } else if(oprasi === 'bagi') {
+                if (nomor2 === 0){
+                    hasil = "gabisa di bagi 0"
+                } else {
+                    hasil = nomor1 / nomor2;
+                }
+            } 
+
+            document.getElementById('hasil').value = hasil;
+        }
+    </script>
+</body>
+</html>

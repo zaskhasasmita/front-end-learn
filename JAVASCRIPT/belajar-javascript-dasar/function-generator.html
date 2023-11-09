@@ -1,0 +1,26 @@
+<script>
+
+    function* createName() {
+        yield "Zaskha";
+        yield "Bayyin";
+        yield "Riki";
+    }
+
+    // const names = ;
+    for(const name of createName()) {
+        console.log(name)
+    }
+
+    function* buatGanjil(value){
+        for (let i = 0; i < value; i++) {
+            if(i % 2 !== 0) {
+                yield i;
+            }
+        }
+    }
+
+    for (const angka of buatGanjil(100)) {
+        console.log(angka);
+    }
+
+</script>

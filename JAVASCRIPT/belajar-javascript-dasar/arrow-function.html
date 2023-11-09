@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+    <script>
+        // const sayHello = (name) => {
+        //     const say =  `Hello ${name}`;
+        //     console.info(say)
+        // }
+
+        //     // const sayHello = (name) => console.info(`Hello ${name}`)
+        //     const sayHello = name => console.info(`Hello ${name}`) //boleh
+
+        //     const multiply =  (number1, number2) => number1*number2;
+
+
+        // sayHello('zaskha')
+        // console.info(multiply(5, 6))
+
+        function giveMeName(callback) {
+            callback('zaskahaa');
+        }
+
+        giveMeName((name)=>console.info(`Hello ${name}`))
+    </script>
+</body>
+</html>

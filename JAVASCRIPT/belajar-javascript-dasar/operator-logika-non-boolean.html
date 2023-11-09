@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // || (atau)
+        console.info("hello" || ''); // Hasilnya adalah "hello" karena "hello" adalah "truthy," dan operator "atau" akan mengembalikan nilai pertama yang "truthy."
+        
+        console.info("" || []); // Hasilnya adalah [] (array kosong) karena kedua nilai kosong, dan operator "atau" akan mengembalikan nilai pertama yang "falsy" atau kosong.
+        
+        console.info("Pagi" || "Sore"); // Hasilnya adalah "Pagi" karena "Pagi" adalah "truthy."
+
+        console.info(0 || null); // Hasilnya adalah 42 karena 0 adalah "falsy," dan operator "atau" akan mengembalikan nilai kedua.
+
+        console.info(null || "Tidak ada nilai"); // Hasilnya adalah "Tidak ada nilai" karena null adalah "falsy."
+
+        console.info(undefined || "Tidak ada nilai"); // Hasilnya adalah "Tidak ada nilai" karena undefined adalah "falsy."
+
+        console.info(NaN || "Not a Number"); // Hasilnya adalah "Not a Number" karena NaN adalah "falsy."
+
+        console.info(true || false); // Hasilnya adalah true karena true adalah "truthy," dan operator "atau" akan mengembalikan nilai pertama yang "truthy."
+
+
+        // && (dan)
+        console.info("hello" && ''); // Hasilnya adalah "" (string kosong) karena keduanya adalah "falsy," dan operator "&&" akan mengembalikan nilai yang menyebabkan hasil sebelumnya menjadi "falsy."
+
+        console.info("" && []); // Hasilnya adalah "" (string kosong) karena keduanya adalah "falsy," dan operator "&&" akan mengembalikan nilai yang menyebabkan hasil sebelumnya menjadi "falsy."
+
+        console.info("Pagi" && "Sore"); // Hasilnya adalah "Sore" karena keduanya adalah "truthy," dan operator "&&" akan mengembalikan nilai terakhir yang dievaluasi.
+
+        console.info(0 && 42); // Hasilnya adalah 0 karena 0 adalah "falsy," dan operator "&&" akan mengembalikan nilai yang menyebabkan hasil sebelumnya menjadi "falsy."
+
+        console.info(null && "Tidak ada nilai"); // Hasilnya adalah null karena null adalah "falsy," dan operator "&&" akan mengembalikan nilai yang menyebabkan hasil sebelumnya menjadi "falsy."
+
+        console.info(undefined && "Tidak ada nilai"); // Hasilnya adalah undefined karena undefined adalah "falsy," dan operator "&&" akan mengembalikan nilai yang menyebabkan hasil sebelumnya menjadi "falsy."
+
+        console.info(NaN && "Not a Number"); // Hasilnya adalah NaN karena NaN adalah "falsy," dan operator "&&" akan mengembalikan nilai yang menyebabkan hasil sebelumnya menjadi "falsy."
+
+        console.info(true && false); // Hasilnya adalah false karena keduanya adalah "truthy," dan operator "&&" akan mengembalikan nilai terakhir yang dievaluasi.
+
+        /*
+        | Operator | Kedua Nilai "Truthy"         | Salah Satu Nilai "Falsy"     | Kedua Nilai "Falsy"          |
+        |----------|------------------------------|------------------------------|------------------------------|
+        | &&       | Mengembalikan Nilai Terakhir | Mengembalikan Nilai "Falsy"  | Mengembalikan Nilai Pertama  |
+        | ||       | Mengembalikan Nilai Pertama  | Mengembalikan Nilai "Truthy" | Mengembalikan Nilai Terakhir |
+        */
+
+        //pengambilan keputusan
+        const usia = 5;
+        const izinOrangTua = false;
+
+        if (usia >= 18 && izinOrangTua) {
+            console.log("Diperbolehkan masuk klub malam.");
+        } else if (usia >= 18 || izinOrangTua) {
+            console.log("Diperbolehkan masuk klub malam dengan izin orang tua.");
+        } else {
+            console.log("Tidak diperbolehkan masuk klub malam.");
+        }
+
+        //Penanganan Nilai Default:
+        const namaPengguna = "Zaskha";
+        const namaTampilan = namaPengguna || "Pengguna Baru";
+        console.log(`Selamat datang, ${namaTampilan}`);
+
+        //Filtering dan Pemrosesan Data
+        const data = {
+            nama: "John",
+            usia: 30,
+            status: "aktif"
+        };
+
+        if ((data.nama && data.usia >= 18) && (data.status === "aktif")) {
+            // Melakukan pemrosesan data jika memenuhi kondisi
+            console.log("Data valid untuk pemrosesan.");
+        }
+
+
+    </script>
+</body>
+</html>

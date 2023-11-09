@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let  parameter = 0;
+
+        // let data = parameter;
+        // if(data === null || data === undefined) {
+        //     data = "apa ini coy";
+        // }
+
+        // cara nulis singkat Nullish Coalescing
+       let data = parameter ?? "Nilaii defaul";
+
+        alert(data);
+
+
+        // Mendefinisikan keranjang belanja sebagai array objek produk
+const shoppingCart = [
+    { productName: "Laptop", price: 1000, quantity: 10 },
+    { productName: "Smartphone", price: 500, quantity: 3 },
+    { productName: "Mouse", price: 20, quantity: 1 },
+];
+
+// Fungsi untuk menghitung total harga belanja
+function calculateTotalPrice(cart) {
+    let total = 0;
+    for (const item of cart) {
+        total += item.price * item.quantity;
+    }
+    return total;
+}
+
+// Menampilkan keranjang belanja dan total harga
+console.log("Keranjang Belanja:");
+for (const item of shoppingCart) {
+    console.log(`- ${item.productName} x${item.quantity} - Harga: $${item.price * item.quantity}`);
+}
+
+const totalPrice = calculateTotalPrice(shoppingCart);
+console.log(`Total Harga Belanja: $${totalPrice}`);
+
+ 
+
+    </script>
+</body>
+</html>

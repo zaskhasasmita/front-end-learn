@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator GUI</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            color: #DBE2EF;
+            padding: 0;
+        }
+        .calculator {
+            width: 250px;
+            margin: 120px auto;
+            background-color: rgb(202, 202, 202);
+            padding: 50px 30px;
+            border-radius: 20px;
+            background-color: #112D4E;
+        }
+        .container-calculator {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: 
+            'input input input input'
+            'clear clear hapus hapus'
+            'satu dua tiga tambah'
+            'empat lima enam kurang'
+            'tujuh delapan sembilan samadengan'
+            'kali nol bagi samadengan'
+            'copy copy copy copy'
+            ;
+            gap: 10px;
+        }
+        button {
+            padding: 10px;
+            background-color: white;
+            border: none;
+            border-radius: 8px;
+            font: inherit;
+            color: inherit;
+            background-color: #3F72AF;
+        }
+
+        button:hover {
+            background-color: #1e518f;
+            cursor: pointer;
+        }
+        button:active {
+            background-color: #0c386e;
+
+        }
+        input[type=text] {
+            background-color: white;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: inherit;
+
+        }
+        .input {grid-area: input;}
+        #clear {grid-area: clear;}
+        #hapus {grid-area: hapus;}
+        #satu {grid-area: satu;}
+        #dua {grid-area: dua;}
+        #tiga {grid-area: tiga;}
+        #empat {grid-area: empat;}
+        #lima {grid-area: lima;}
+        #enam {grid-area: enam;}
+        #tujuh {grid-area: tujuh;}
+        #delapan {grid-area: delapan;}
+        #sembilan {grid-area: sembilan;}
+        #nol {grid-area: nol;}
+        #tambah {grid-area: tambah;}
+        #kurang {grid-area: kurang;}
+        #kali {grid-area: kali;}
+        #bagi {grid-area: bagi;}
+        #samadengan {grid-area: samadengan;}
+
+        .copy{
+            font-size: 12px;
+            letter-spacing:2px;
+            text-transform: uppercase;
+            text-align: center;
+            grid-area: copy;
+            font-weight: 100;
+            margin-bottom: -30px;
+            color: #2a598f;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="calculator">
+        <div class="container-calculator">
+            <input type="text" class="input" id="display" readonly disabled >
+            <button class="operator" id="clear">Clear</button>
+            <button class="operator" id="hapus">⌫</button>
+            <button class="angka" id="satu">1</button>
+            <button class="angka" id="dua">2</button>
+            <button class="angka" id="tiga">3</button>
+            <button class="operator" id="tambah">+</button>
+            <button class="angka" id="empat">4</button>
+            <button class="angka" id="lima">5</button>
+            <button class="angka" id="enam">6</button>
+            <button class="operator" id="kurang">-</button>
+            <button class="angka" id="tujuh">7</button>
+            <button class="angka" id="delapan">8</button>
+            <button class="angka" id="sembilan">9</button>
+            <button class="operator" id="kali">x</button>
+            <button class="angka" id="nol">0</button>
+            <button class="operator" id="bagi">÷</button>
+            <button class="operator" id="samadengan">=</button>
+            <div class="copy">
+                <p>GUI Calculator by: Zaskha</p>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+    // inisialisasi variable
+    const layar = document.getElementById('display'); //ini buat nampilin di display
+    let masukanSekarang = ""; // buat melacak masukan user
+    let nilaiPertama = null; // buat nyimpen nilai Pertama dalam perhitungan
+    let operator = null; // buat nyimpen operator perhitungan
+    let menungguMasukanKedua = false; // buat menunggu masukan kedua setela user milih operator 
+
+
+    //jalanin tombol clear
+    //cari clear nya
+    const clearButton = document.getElementById('clear');
+
+    // tambahin event untuk aksi clear
+    // clearButton.addEventListener("click", () => {
+    //     // panggil fungsu bersihin layar
+    //     bersihkanMasukan();
+    // });
+
+    // fungsi untuk membersihkan layar
+    // function bersihkanMasukan() {
+    //      masukanSekarang = ""; 
+    //      nilaiPertama = null; 
+    //      operator = null; 
+    //      menungguMasukanKedua = false; 
+    //      perbaruiLayar();
+    // }
+
+    // pake fungsi yg ada namanya
+    function handleClearClick() {
+        layar.value = ""; //ngehapus isi layar
+    }
+
+    clearButton.addEventListener("click", handleClearClick);
+
+
+    //bikin fungsi buat tombol angka
+    // const tombolAngka = document.querySelectorAll('.angka');
+
+    // //// Iterasi melalui setiap tombol angka dan menambahkan event listener
+    // tombolAngka.forEach((tombol) => {tombol.addEventListener("click", () => {masukanDigit(tombol.textContent)})});
+
+    // pake cara barbar hehe
+    const tombolSatu = document.getElementById("satu");
+    const tombolDua = document.getElementById("dua");
+    const tombolTiga = document.getElementById("tiga");
+    const tombolEmpat = document.getElementById("empat");
+    const tombolLima = document.getElementById("lima");
+    const tombolEnam = document.getElementById("enam");
+    const tombolTujuh = document.getElementById("tujuh");
+    const tombolDelapan = document.getElementById("delapan");
+    const tombolSembilan = document.getElementById("sembilan");
+    const tombolNol = document.getElementById("nol");
+
+    // kasih event listener
+    tombolSatu.addEventListener("click", klikTombolSatu);
+    tombolSatu.addEventListener("click", klikTombolDua);
+    tombolSatu.addEventListener("click", klikTombolTiga);
+    tombolSatu.addEventListener("click", klikTombolEmpat);
+    tombolSatu.addEventListener("click", klikTombolLima);
+    tombolSatu.addEventListener("click", klikTombolEnam);
+    tombolSatu.addEventListener("click", klikTombolTujuh);
+    tombolSatu.addEventListener("click", klikTombolDelapan);
+    tombolSatu.addEventListener("click", klikTombolSembilan);
+    tombolSatu.addEventListener("click", klikTombolNol);
+
+
+    function klikTombolSatu(){
+        masukanDigit("1");
+    }
+    function klikTombolDua(){
+        masukanDigit("2");
+    }
+    function klikTombolTiga(){
+        masukanDigit("3");
+    }
+    function klikTombolEmpat(){
+        masukanDigit("4");
+    }
+    function klikTombolLima(){
+        masukanDigit("5");
+    }
+    function klikTombolEnam(){
+        masukanDigit("6");
+    }
+    function klikTombolTujuh(){
+        masukanDigit("7");
+    }
+    function klikTombolDelapan(){
+        masukanDigit("8");
+    }
+    function klikTombolSembilan(){
+        masukanDigit("9");
+    }
+    function klikTombolNol(){
+        masukanDigit("0");
+    }
+
+    function masukanDigit(angka) {
+        if (menungguMasukanKedua) {
+            masukanSekarang = angka;
+            menungguMasukanKedua = false;
+        } else {
+            if(masukanSekarang === "0") {
+                masukanSekarang = angka;
+            } else {
+                masukanSekarang += angka;
+            }
+        }
+        perbaruiLayar();
+    }
+
+    function perbaruiLayar() {
+        layar.value = masukanSekarang;
+    }
+</script>
+    
+</body>
+</html>

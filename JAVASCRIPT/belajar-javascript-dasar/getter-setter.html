@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getter seter</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            namaDepan : 'Zaskha',
+            namaBelakang : 'Sasmita',
+            get fullName(){
+                return `${this.namaDepan} ${this.namaBelakang}`;
+            },
+            set fullName(value) {
+                const array = value.split(" ");
+                this.namaDepan = array[0];
+                this.namaBelakang = array[1];
+            }
+        };
+
+    
+        person.fullName = 'Rahma Ayu';
+        console.table(person)
+        person.fullName = 'karina marsya';
+        console.table(person)
+        person.fullName = 'irna rismawati';
+        console.table(person)
+
+    </script>
+</body>
+</html>
