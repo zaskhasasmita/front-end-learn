@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+</head>
+<body>
+    <button onclick="buka()">Pencet</button>
+    <script>
+        alert("Selamat Datang");
+        // const name = prompt("nama kamu siapa?");
+        // document.writeln(`Selamat datang ${name}, semoga betah`)
+        // confirm('kamu dukung palestina?')
+        function buka() {
+            let name = prompt("siapa nama kamu?");
+            let konfirmasi = confirm(`hai ${name}, mau beli produk kami?`);
+            if(konfirmasi) {
+                document.writeln("sip bagus laopyu");
+            } else {
+                document.writeln("hus pergi");
+            }
+        }
+        
+    </script>
+</body>
+</html>
