@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        /* 
+            filter : 
+            blur(px)
+            brightness(angka%)
+            contrast(angka%)
+            saturate(angka%)
+            grayscale(angka%)
+            sepia(angka%)
+            hue-rotate(deg)
+            invert(angka%)
+            opacity(angka%)
+            drop-shadow(same with box-shadow)
+        */
+        img {
+            filter: grayscale(77%) blur(3px) brightness(85%) saturate(129%) contrast(116%) drop-shadow(8px 7px 5px rgba(0,0,0,0.32));
+            transition: 1s;
+            -webkit-transition: 1s;
+            -o-transition: 1s;
+            -moz-transition: 1s;
+        }
+        img:hover {
+            /* filter: brightness(0.1); */
+            /* filter: hue-rotate(100deg); */
+            filter: brightness(93%) saturate(129%) contrast(116%) drop-shadow(8px 7px 5px rgba(0,0,0,0.32));
+            transition: 1s;
+            -webkit-transition: 1s;
+            -o-transition: 1s;
+            -moz-transition: 1s;
+        }
+/* 
+    https://cssgenerator.org/filter-css-generator.html        
+*/
+    </style>
+</head>
+<body>
+    <img src="jek.jpg" alt="">
+</body>
+</html>

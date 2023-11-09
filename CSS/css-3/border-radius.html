@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brder radius</title>
+    <style>
+        div {
+            float: left;
+            margin: 20px;
+        }
+        .box1 {
+            width: 160px;
+            height: 160px;
+            background-color: salmon;
+            border-radius: 10px;
+        }
+        .box2 {
+            width: 160px;
+            height: 160px;
+            background-color: rgb(180, 250, 114);
+            border-top-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+        }
+        .box3 {
+            width: 160px;
+            height: 160px;
+            background-color: rgb(123, 114, 250);
+            border-radius: 50%;
+        }
+        .box4 {
+            width: 160px;
+            height: 80px;
+            background-color: rgb(250, 114, 159);
+            border-radius: 80px 80px 0 0;
+        }
+        .box5 {
+            width: 160px;
+            height: 80px;
+            background-color: rgb(250, 114, 159);
+            border-radius: 0 0 80px 80px;
+            margin-top: 100px;
+        }
+        .box6 {
+            width: 160px;
+            height: 160px;
+            background-color: rgb(230, 250, 114);
+            border-radius: 10px 50% 50% 10px;
+        }
+        .img {
+            width: 160px;
+            height: 160px;
+            background-image: url(jek.jpg);
+            background-size: cover;
+            background-color: rgb(180, 250, 114);
+            border-top-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            /* overflow: hidden;  ini kalau img nya element*/
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="img"></div>
+    
+</body>
+</html>

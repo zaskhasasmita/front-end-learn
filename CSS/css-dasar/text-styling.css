@@ -1,0 +1,31 @@
+/* 
+color : warna pada tulisan
+text-align : mengatur format pada text
+text-indent : memberi indentasi pada paragraf (jarak spasi awal pararaf)
+text-decoration : mengatur dekorasi pada text
+text-transform : mengubah jenis huruf menjadi besae, kecil, kapital
+letter-spacing : mengatur spasi antar huruf
+word-spacing : mengatur spasi antar kata
+*/
+.colorname {
+    color: lightcoral;
+}
+.colorrgb {
+    color: rgb(5, 15, 155);
+}
+
+.colorhex {
+    color: #03c223;
+}
+
+h2 {
+    text-decoration: overline;
+    text-transform: capitalize;
+    word-spacing: 10px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 40px;
+    letter-spacing: 5px;
+}

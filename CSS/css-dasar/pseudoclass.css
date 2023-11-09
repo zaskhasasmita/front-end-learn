@@ -1,0 +1,45 @@
+/* 
+:link --> style default pada sebuah link (a yang memiliki href)
+:hover --> style ketika kursor mouse ada di atas link/element
+:active --> style ketika sebuah element/ link di klik
+:visited --> style ketika sebuah link sudah pernah dikunjungi sebelumnya(menggunakan browser yang sama) 
+*/
+
+.hello{
+    color: orange;
+}
+.hello:hover{
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.hello:active {
+    font-style: italic;
+}
+.hello:visited {
+    color: red;
+}
+
+/* 
+Berhubungan dengan posisi elemen
+:first-child --> memilih elemen pertama daari sebuah parent (element pembungkusnya)
+:last-child --> memili elemen terakhir
+:nth-child(n) --> memililih elemen ke-n
+*/
+
+li:nth-child(3n+1) a {
+    /* odd, even, 3n, 3n+1 */
+    color: green;
+}
+li:nth-child(3n+1) a:hover {
+    color: red;
+}
+
+/* 
+:first-of-type --> memilih elemen pertama dari jenis tag
+:last-of-type --> sebaliknya 
+*/
+
+p:first-of-type {
+    color: red;
+}

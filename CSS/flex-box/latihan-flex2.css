@@ -1,0 +1,139 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #bdbdbd;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1000px;
+}
+.container1 {
+    width: inherit ;
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    background-color: aliceblue;
+}
+.container1 .main, .container1 .link, .container1 .aside {
+    margin: 8px;
+}
+.main{
+    flex: 3;
+    order: 2;
+}
+.link{
+    flex: 1;
+    order: 1;
+}
+.aside{
+    flex: 1;
+    order: 3;
+}
+
+
+/* //////////////////////////// */
+
+.container2 {
+    max-width: 800px;
+    margin: 50px auto;
+    justify-content: center;
+}
+
+.layanan1{background-color: #eb7171;}
+.layanan2{background-color: #66df66;}
+.layanan3{background-color: #6c6ce6;}
+
+.layanan {
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 5px;
+    width: inherit;
+}
+
+/* ///////////////////// */
+
+.container3 {
+    width: inherit;
+    margin: 50px auto;
+    border :1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail {
+    padding: 5px;
+    width: 40%;
+}
+
+.thumbnail img {
+    transition: .3s;
+    width: 100%;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.container4 {
+    width: inherit;
+    margin: 50px 50px;
+}
+.header {
+    height: 150px;
+    background-color: #777777;
+}
+.card {
+    border : 1px solid black;
+    border-radius: 10px;
+    background-color: #afafaf ;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px;
+    transition: .3s;
+}
+.content {
+    padding: 0 20px 20px;
+}
+
+/* responsive */
+
+@media(min-width: 800px) {
+    .container1 {
+        width: 800px;
+    }
+
+    .container2 {
+        display: flex;
+    }
+    .layanan {    
+        width: 30%;
+    }
+
+    .container3 {
+        max-width: 800px;
+        align-items: center;
+        justify-content: center;
+    }
+    .thumbnail {
+        width: 20%;
+    }
+
+    .container4 {
+        display: flex;
+        max-width: 800px;
+        align-items: center;
+        justify-content: center;
+        margin: 50px auto;
+    }
+
+}
+
+.card:hover {
+    transform: scale(1.1 , 1.1);
+}
+
+.thumbnail img:hover {
+    transform: scale(1.1 , 1.1);
+}

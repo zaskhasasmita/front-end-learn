@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        /*
+        
+        animation :
+        [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state]
+        
+        */
+
+        .kotak {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            animation-name: animasiKotak;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode:forwards;
+            animation-play-state: running;
+        }
+
+        @keyframes animasiKotak {
+            from {
+                width: 100px;
+            }
+            to {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="kotak"></div>
+</body>
+</html>

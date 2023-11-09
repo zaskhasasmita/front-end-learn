@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lat 2</title>
+    <style>
+
+        .container {
+            display: grid;
+            grid-template-rows: 100px 1fr;
+            grid-template-columns: 200px 1fr;
+            grid-template-areas: 
+            'header content'
+            'menu main';
+        }
+
+        .item1 {grid-area: header;}
+        .item2 {grid-area: content;}
+        .item3 {grid-area: menu;}
+        .item4 {grid-area: main;}
+
+    </style>
+</head>
+<body>
+ 
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+    </div>
+    
+</body>
+</html>
+
+<!-- Soal Latihan 2:
+
+1 Buatlah grid container dengan dua kolom dan dua baris.
+2 Beri nama kolom dengan "header" dan "content" serta beri nama baris dengan "menu" dan "main".
+3 Atur lebar kolom pertama menjadi 200px dan kolom kedua menjadi 1 fraksi.
+4 Atur tinggi baris pertama menjadi 100px dan baris kedua menjadi 1 fraksi.
+5 Letakkan elemen-elemen dalam grid container sehingga sesuai dengan nama kolom dan baris yang telah Anda tentukan. -->

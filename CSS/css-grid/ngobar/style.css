@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+body {
+    background-color: #ddd;
+    font-size: 18px;
+    margin: 50px;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+.header {
+    display: grid;
+    grid-template-areas: 
+    'hero hero feature-1'
+    'hero hero feature-2';
+}
+
+.hero {
+    background-color: black;
+    color: white;
+    grid-area: hero;
+    min-height: 300px;
+    background-image: url(img/hero.jpg);
+    background-size: cover;
+    background-position:center;
+    padding: 50px;
+}
+.hero>* {
+    display: none;
+}
+
+.features {
+    display: grid;
+    /* justify-content: center;
+    align-content: center; */
+    place-content: center;
+    text-align: center;
+}
+.features .price {
+    font-size: 3em;
+    font-weight: 200;
+}
+.feature-1 {
+    grid-area: feature-1;
+    background-color: black;
+    color: white;
+    background-image: url(img/hoodie.jpg);
+    background-size: cover;
+}
+.feature-2 {
+    grid-area: feature-2;
+    background-color: black;
+    color: white;
+    background-image: url(img/tshirt.jpg);
+    background-size: cover;
+}
+
+/* navigation bar */
+
+.menu {
+    order: -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.menu .brand {
+    font-size: 1.3em;
+    color: #333;
+}
+
+.menu ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+}
+
+.menu a {
+    display: block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+/* responsive */
+
+@media (max-width: 1024px) {
+    .menu {
+        order: inherit;
+        grid-template-columns: 1fr;
+    }
+    .menu .brand {
+        display: none;
+    }
+    .hero>* {
+        display: block;
+        background-color: black;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+}

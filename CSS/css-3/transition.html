@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transisi</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            margin: 100px ;
+            width: 900px;
+        }
+        .kotak {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: aliceblue;
+            /* transition: property duration function delay; */
+            
+            margin: 5px;
+        }
+
+        .kotak1 {transition: all 2.5s ease ;}
+        .kotak2 {transition: all 2.5s ease-in ;}
+        .kotak3 {transition: all 2.5s ease-out ;}
+        .kotak4 {transition: all 2.5s ease-in-out ;}
+        .kotak5 {transition: all 2.5s linear ;}
+        .kotak6 {transition: all 2.5s cubic-bezier(0.22,-0.4, 0.92, 1.56) ;}
+        .delay {transition: margin-left 3s, transform 3s 2s, background-color 2s 3s }
+
+
+        .container:hover .kotak{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(114, 123, 250);
+            margin-left: 800px;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kotak kotak1">ease</div>
+        <div class="kotak kotak2">ease-in</div>
+        <div class="kotak kotak3">ease-out</div>
+        <div class="kotak kotak4">ease-in-out</div>
+        <div class="kotak kotak5">Linear</div>
+        <div class="kotak kotak6">Cubic Bezier</div>
+    </div>
+
+    <div class="container">
+        <div class="kotak delay">
+    </div>
+</body>
+</html>

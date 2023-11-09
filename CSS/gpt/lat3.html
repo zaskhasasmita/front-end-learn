@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lat 3</title>
+    <style>
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .wide {
+            grid-column: span 2;
+        }
+        .item{
+            background-color: orange;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item wide">3</div>
+    </div>
+    
+    
+</body>
+</html>
+
+<!-- 
+Buatlah grid container dengan tiga kolom dan dua baris.
+Atur kolom pertama dan kedua dengan lebar yang sama.
+Beri satu elemen dalam kolom ketiga atribut grid-column untuk mengisi dua kolom.
+Letakkan elemen-elemen dalam grid container sehingga sesuai dengan deskripsi di atas.
+ -->

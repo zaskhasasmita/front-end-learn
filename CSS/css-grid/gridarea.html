@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>areas</title>
+
+    <style>
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            'header header header'
+            'content content content'
+            'aside aside aside'
+            'footer footer footer';
+            gap: 5px;
+        }
+
+        .item {
+            padding: 50px;
+        }
+        .header {
+            background-color: blueviolet;
+            grid-area: header;
+        }
+        .content {
+            background-color: yellow;
+            grid-area: content;
+        }
+        .aside {
+            background-color: tomato;
+            grid-area: aside;
+        }
+        .footer {
+            background-color: grey;
+            grid-area: footer;
+        }
+
+        @media screen and (min-width:576px){
+            .container {
+            grid-template-areas: 
+            'header header header'
+            'content content aside'
+            'content content aside'
+            'footer footer footer';
+        }
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item header">header</div>
+        <div class="item content">content</div>
+        <div class="item aside">aside</div>
+        <div class="item footer">footer</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify</title>
+    <style>
+
+        /* flex-wrap  (biar ga maksa si item nya jadi gepeng) */
+        /* 
+            : nowrap
+            : wrap
+            : wrap-reverse
+        */
+
+        .container_flex-start {
+            width: 600px;
+            border: 5px solid #333;
+            margin: 60px auto;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            /*  */
+            justify-content: flex-start;
+        }
+
+        .container_flex-end {
+            width: 600px;
+            border: 5px solid #333;
+            margin: 60px auto;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            /*  */
+            justify-content: flex-end;
+        }
+
+        .container_center {
+            width: 600px;
+            border: 5px solid #333;
+            margin: 60px auto;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            /*  */
+            justify-content: center;
+        }
+        .container_space-between {
+            width: 600px;
+            border: 5px solid #333;
+            margin: 60px auto;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            /*  */
+            justify-content: space-between;
+        }
+        .container_space-arround {
+            width: 600px;
+            border: 5px solid #333;
+            margin: 60px auto;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            /*  */
+            justify-content: space-around;
+        }
+        .container_space-evenly {
+            width: 600px;
+            border: 5px solid #333;
+            margin: 60px auto;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            /*  */
+            justify-content: space-evenly;
+        }
+
+
+
+        .item {
+            text-align: center;
+            line-height: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: aliceblue;
+            font-size: 30px;
+            margin: 2px;
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+        
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-bottom: -50px;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>justify-content: flex-start</h1>
+    <div class="container_flex-start">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h1>justify-content: flex-end</h1>
+    <div class="container_flex-end">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h1>justify-content: center</h1>
+    <div class="container_center">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h1>justify-content: space-between</h1>
+    <div class="container_space-between">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h1>justify-content: space-arround</h1>
+    <div class="container_space-arround">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h1>justify-content: space-evenly</h1>
+    <div class="container_space-evenly">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+
+    
+</body>
+</html>

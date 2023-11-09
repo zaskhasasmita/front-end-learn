@@ -1,0 +1,17 @@
+/* 
+background-color : mengatur warna pada background
+background-image : mengatur gambar yang akan digunakan pada background
+background-position : mengatur posisi gambar pada background
+background-repeat : mengatur jenis pengulangan pada background
+*/
+body {
+    background-color: white;
+    background-image: url(google.png);
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+/* singkatan */
+/* 
+background : color url() position repeat;
+*/
+

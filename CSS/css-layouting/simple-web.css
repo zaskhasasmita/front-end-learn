@@ -1,0 +1,203 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ================================================================= */
+/* End of css reset. thankyou css reset ;) */
+/* ================================================================= */
+
+ /* micro clear fix */
+            /**
+        * For modern browsers
+        * 1. The space content is one way to avoid an Opera bug when the
+        *    contenteditable attribute is included anywhere else in the document.
+        *    Otherwise it causes space to appear at the top and bottom of elements
+        *    that are clearfixed.
+        * 2. The use of `table` rather than `block` is only necessary if using
+        *    `:before` to contain the top-margins of child elements.
+        */
+        .cf:before,
+        .cf:after {
+            content: " "; /* 1 */
+            display: table; /* 2 */
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+/* ================================================================= */
+/* End of micro clear fix. thankyou micro clear fix ;) */
+/* ================================================================= */
+
+
+body {
+	font-size: 16px;
+	line-height: 28px;
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #eaeaea;
+	background-image: url(leaves.png);
+}
+
+header, main, footer {
+	padding: 20px;
+}
+.container {
+	width: 960px;
+	margin: 90px auto;
+	background-color: white;
+	position: relative;
+}
+
+.top-bar {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	height: 56px;
+	border-bottom: 5px solid salmon;
+	position: fixed;
+	background-color: lightsteelblue;
+}
+
+.tweet {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background-image: url(twitter.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-indent: -9990px;
+	position: absolute;
+	top: -23px;
+	right: -28px;
+}
+
+header h1 {
+	font-weight: bold;
+	font-size: 40px;
+}
+nav {
+	padding: 20px;
+	padding-top: 0px;
+	padding-left: 15px;
+	padding-bottom: 10px;
+}
+nav ul li {
+	display: inline-block;
+	margin-right: 10px ;
+}
+nav ul li a {
+	text-decoration: none;
+	color: salmon;
+	padding: 10px;
+}
+nav ul li a:hover {
+	background-color: lightskyblue;
+	color: white;
+}
+
+.hero {
+	height:320px ;
+	background-image: url('computer.jpg');
+	background-size: cover;
+	background-position: 0 -720px;
+	border-top: 5px solid salmon;
+	border-bottom: 5px solid lightskyblue;
+}
+main {
+	width: 600px;
+	float: left;
+	/* background-color: aquamarine; */
+}
+main h2 {
+	font-size: 28px;
+	font-weight: bold;
+}
+main .penulis {
+	font-size: 12px;
+	margin-top: 0px;
+}
+main .penulis a {
+	text-decoration: none;
+	color: salmon;
+}
+
+main p {
+	margin-top: 15px;
+	font-size: 15px;
+}
+
+aside {
+	float: right;
+	padding: 20px;
+	width: 300px;
+	box-sizing: border-box;
+	/* background-color: aqua; */
+	font-size: 14px;
+	line-height: 24px;
+}
+aside h3 {
+	font-weight: bold;
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+aside img {
+	width: 100px;
+	float: left;
+	padding-right: 15px;
+}
+
+footer {
+	background-color: #333333;
+	color: #eaeaea;
+	text-align: center;
+	padding: 12px;
+}

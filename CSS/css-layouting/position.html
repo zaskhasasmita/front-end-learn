@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        .container {
+            width: 600px;
+            height: 600px;
+            border: 10px solid green;
+            position: relative;
+            margin: auto;
+        }
+        .kotak1 {
+            background-color: salmon;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+        .kotak2 {
+            background-color: aqua;
+            /* position: absolute; */
+            position:fixed;
+            top: 0 ;
+            left: 0;
+            width: 100%;
+            height: 50px;
+        }
+        .kotak3 {
+            background-color: violet;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kotak1"></div>
+        <div class="kotak2"></div>
+        <div class="kotak3"></div>
+    </div>
+    
+
+</body>
+</html>
