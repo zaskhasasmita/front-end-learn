@@ -1,0 +1,37 @@
+Latihan ini dibuat oleh CHAT GPT untuk melatih pemahaman JavaScript saya
+
+Tentu, berikut beberapa Latihan sederhana untuk melatih pemahamanmu tentang JavaScript Dasar:
+
+1. **Variabel dan Operasi:**
+   - Buat variabel untuk menyimpan nama, usia, dan jenis kelamin. Lalu, tampilkan informasi tersebut di console.
+   - Gunakan operasi aritmatika untuk menghitung umur dalam bulan atau tahun, dan tampilkan hasilnya.
+
+2. **String Manipulation:**
+   - Buat dua variabel string, satu berisi nama depan dan satu berisi nama belakang. Gabungkan keduanya menjadi satu string.
+   - Tampilkan panjang dari string yang dihasilkan.
+
+3. **Percabangan (if-else):**
+   - Buat variabel untuk menyimpan nilai suhu. Jika suhu di atas 30 derajat Celsius, tampilkan pesan "Panas", jika di bawah 10 derajat Celsius, tampilkan pesan "Dingin", dan selain itu, tampilkan pesan "Sedang".
+
+4. **Perulangan (for atau while):**
+   - Gunakan perulangan untuk menampilkan angka 1 hingga 5 di console.
+
+5. **Array dan Perulangan:**
+   - Buat array dengan beberapa nama. Gunakan perulangan untuk menampilkan setiap nama di console.
+
+6. **Fungsi:**
+   - Buat fungsi sederhana yang menerima dua parameter (misalnya, angka) dan mengembalikan hasil penjumlahan kedua parameter tersebut.
+
+7. **Manipulasi DOM:**
+   - Buat halaman HTML sederhana dengan satu tombol. Gunakan JavaScript untuk menanggapi klik tombol tersebut dengan menampilkan pesan di console.
+
+8. **Event Handling:**
+   - Tambahkan event listener pada elemen HTML. Saat elemen diklik, tampilkan pesan di console.
+
+9. **Validation (if-else):**
+   - Buat formulir sederhana dengan satu input. Gunakan JavaScript untuk memvalidasi apakah input tersebut tidak kosong sebelum mengirimkan formulir.
+
+10. **Prompt dan Alert:**
+   - Gunakan `prompt` untuk meminta pengguna memasukkan nama. Tampilkan pesan alert dengan menyapa pengguna.
+
+Pastikan untuk mengecek hasil tugas kamu di console browser atau menggunakan environment JavaScript seperti Node.js. Semoga tugas ini membantu meningkatkan pemahamanmu tentang JavaScript Dasar!

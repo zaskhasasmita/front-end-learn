@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan 1</title>
+</head>
+<body>
+    <script>
+
+// 1. **Variabel dan Operasi:**
+//    - Buat variabel untuk menyimpan nama, usia, dan jenis kelamin. Lalu, tampilkan informasi tersebut di console.
+//    - Gunakan operasi aritmatika untuk menghitung umur dalam bulan atau tahun, dan tampilkan hasilnya.
+
+
+        let nama, kelahiranBulan, kelahiranTahun, gender;
+
+        nama            = prompt('Masukan Nama :');
+        kelahiranBulan  = prompt('Bulan Kelahiran (1-12) :');
+        kelahiranTahun  = prompt('Tahun Kelahiran :');
+        gender          = prompt('Jenis Kelamin');
+
+
+        // menghitung usia tahun
+        let tahunSekarang = new Date().getFullYear(); // 2023
+        let usiaTahun = tahunSekarang - kelahiranTahun;
+
+        //menghitung usia bulan
+        let BulanSekarang = new Date().getMonth() + 1; // getMonth() mengembalikan 0 sampai 11
+        let usiaBulan = (usiaTahun * 12) + (BulanSekarang - kelahiranBulan);
+
+        //tambahan tahun bulan
+        let totalBulanTahun = usiaBulan % 12 
+
+        console.log(`Nama Kamu ${nama}, Seorang ${gender}`);
+        console.log(`Kamu kelahiran Tahun ${kelahiranTahun}`);
+        console.log(`Kamu kelahiran Bulan ${kelahiranBulan}`);
+        console.log(`Maka Usia kamu sekarang adalah : \n${usiaTahun} Tahun atau ${usiaBulan} bulan`)
+        console.log(`Atau jiak ditotal : \n${usiaTahun} Tahun ${totalBulanTahun} bulan`)
+        
+
+    </script>
+</body>
+</html>
