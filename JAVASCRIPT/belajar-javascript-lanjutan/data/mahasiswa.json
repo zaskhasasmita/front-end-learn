@@ -1,0 +1,23 @@
+[
+    {
+        "nama" : "Zaskha Sasmita",
+        "nrp"   : "193040134",
+        "email" : "zaskha@mail.com",
+        "jurusan" : "Teknik Informatika",
+        "idDosenWali" : 1
+    },
+    {
+        "nama" : "Mubayyin Hakim",
+        "nrp"   : "193040124",
+        "email" : "bayyin@mail.com",
+        "jurusan" : "Teknik Informatika",
+        "idDosenWali" : 2
+    },
+    {
+        "nama" : "Riki Hidayat",
+        "nrp"   : "193040165",
+        "email" : "riki@mail.com",
+        "jurusan" : "Teknik Industri",
+        "idDosenWali" : 2
+    }
+]

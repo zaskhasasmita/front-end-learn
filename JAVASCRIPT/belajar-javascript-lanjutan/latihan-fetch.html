@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zaskha Movie Database</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col mt-5">
+                <h1>Zaskha Movie Database</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control input-keyword" placeholder="Cari Film...">
+                    <button class="btn btn-primary search-button" type="button">Search</button>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row movie-container">
+            
+        </div>
+    </div>
+
+    <!-- Awal Modal -->
+
+    <div class="modal fade" id="movieDetailModal" tabindex="-1" aria-labelledby="movieDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="movieDetailModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            
+        </div>
+
+        <h1 class="showError"></h1>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- Akhir Modal -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+ 
+
+    <script>
+ 
+        // main
+        const searchButton = document.querySelector('.search-button');
+        searchButton.addEventListener('click', async function() {
+            try {
+                const inputKeyword = document.querySelector('.input-keyword');
+                const movies = await getMovies(inputKeyword.value);
+                updateUI(movies);
+            } catch (err) {
+                /// aku mau menampilkan error di element h1 dengan class '.showError' tapi aku bingung harus gimana caranya. dan juga sertakan fungsu showError
+                alert(err);
+            }
+        })
+
+        
+
+        function getMovies(keyword) {
+            return fetch('http://www.omdbapi.com/?i=tt3896198&apikey=2076f2dc&s=' + keyword)
+                .then( response => {
+                    if(!response.ok) {
+                        throw new Error(response.statusText);
+                    }
+                    return response.json();
+                } )
+                .then( response => {
+                    if (response.Response === "False") {
+                        throw new Error(response.Error);
+                    }
+                    return response.Search;
+                } );
+        }
+
+        function updateUI(movies) {
+            let cards = '';
+            movies.forEach(m =>  cards += showCards(m));
+            const movieContainer = document.querySelector('.movie-container');
+            movieContainer.innerHTML = cards;
+        }
+
+        // event binding
+        document.addEventListener('click', async function(e) {
+            if(e.target.classList.contains('modal-detail-button')) {
+                const imdbid = e.target.dataset.imdbid;
+                const movieDetail = await getMovieDetail(imdbid);
+                updateUIDetail(movieDetail);
+            }
+        });
+
+        function getMovieDetail(imdbid) {
+            return fetch('http://www.omdbapi.com/?=tt3896198&apikey=2076f2dc&i=' + imdbid)
+                .then(response => response.json())
+                .then( m => m );
+                        
+        }
+        
+        function updateUIDetail(m) {
+            const movieDetail = showMovieDetail(m);
+            const modalBody = document.querySelector('.modal-body');
+            modalBody.innerHTML = movieDetail;
+        }
+
+        function showCards(m) {
+        return `<div class="col-md-4 my-3">
+                    <div class="card">
+                        <img src="${m.Poster}" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">${m.Title}</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">${m.Year}</h6>
+                        <a href="#" class="btn btn-primary modal-detail-button" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-imdbid="${m.imdbID}">Show Details</a>
+                        </div>
+                    </div>
+                </div>`
+        }
+
+        function showMovieDetail(m) {
+        return `<div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="${m.Poster}" class="img-fluid">
+                        </div>
+                        <div class="col-md">
+                            <ul class="list-group">
+                                <li class="list-group-item"><h4>${m.Title} (${m.Year})</h4></li>
+                                <li class="list-group-item"><strong>Director : </strong> ${m.Director}</li>
+                                <li class="list-group-item"><strong>Actors : </strong> ${m.Actors}</li>
+                                <li class="list-group-item"><strong>Writer : </strong> ${m.Writer}</li>
+                                <li class="list-group-item"><strong>Plot : </strong><br> ${m.Plot}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>`
+        }
+    </script>
+</body>
+</html>
