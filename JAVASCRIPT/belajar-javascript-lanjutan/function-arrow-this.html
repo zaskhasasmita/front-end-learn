@@ -44,11 +44,11 @@
             margin-top: 25px;
         }
 
-        .caption {
+        .warna {
             background-color: blueviolet;
         }
 
-        .tampil {
+        .ukuran {
             position: absolute;
             width: 400px;
             height: 400px;
@@ -65,36 +65,36 @@
     
 <div class="box"></div>
 
-<div class="layar"></div>
+<!-- <div class="layar"></div> -->
 <!-- <div class="tampil"></div> -->
 
 
 <script>
     const box = document.querySelector('.box');
-    const layar = document.querySelector('.layar');
+    // const layar = document.querySelector('.layar');
     box.addEventListener('click', function() {
     
-        let satu = 'tampil';
-        let dua = 'dua';
+        let satu = 'ukuran';
+        let dua = 'warna';
 
         if(this.classList.contains(satu)) {
             [satu, dua] = [dua, satu];
         }
 
-        this.classList.toggle('tampil');
+        this.classList.toggle(satu);
         setTimeout(() => {
-            this.classList.toggle('caption');
+            this.classList.toggle(dua);
         }, 600);
 
-        layar.classList.toggle('body-change');
+
     
     });
 
-    if(layar.classList.contains('body-change')) {
-        layar.addEventListener('click', function () {
-            layar.classList.toggle('body-change');
-        });
-    }
+    // if(layar.classList.contains('body-change')) {
+    //     layar.addEventListener('click', function () {
+    //         layar.classList.toggle('body-change');
+    //     });
+    // }
     // }
     
 </script>
