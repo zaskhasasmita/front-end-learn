@@ -1,0 +1,36 @@
+/* menu */
+
+/* option */
+.menu {
+    transition: 0.2s ease-out;
+}
+.menu .container {
+    margin-top: 40px;
+    transition: 0.2s ease-out;
+}
+.menu .container ul.option li {
+    text-align: center;
+    margin: 20px 0;
+}
+.menu .container ul.option li a{
+    text-decoration: none;
+    color: #707070;
+    font-weight: var(--fw-bold);
+    font-size: 41.6px;
+}
+
+
+/* socmed */
+.menu .container ul.socmed {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 75px;
+}
+
+.menu .container ul.socmed li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: var(--fw-medium);
+}

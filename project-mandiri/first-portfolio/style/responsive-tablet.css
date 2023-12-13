@@ -1,0 +1,48 @@
+
+/* 
+///////////////// RESPONSIVE TABLET /////////////////
+*/
+@media screen and (max-width: 992px) {
+    /* navigation */
+    nav {
+        height: 120px;
+    }
+    nav .left-side-nav {
+        padding-left: 45px;
+    }
+    nav .right-side-nav {
+        padding-right: 20px;
+    }
+    nav .left-side-nav .logo a {
+        font-size: 35px;
+    }
+    nav .right-side-nav .options .lang a {
+        font-size: 25px;
+    }
+    nav .right-side-nav .options .mode svg {
+        width: 36px ;
+        height: 30px ;
+    }
+    nav .right-side-nav .options .menu svg {
+        width: 51px ;
+        height: 40px ;
+    }
+    
+
+    /* main */
+
+    main .container .intro-1 {
+        margin-top: 90px;
+    }
+    main .container .glance {
+        width: 60%;
+    }
+    main .container .nav-button {
+        /* display: flex; */
+        /* flex-direction: column; */
+        margin-top: 30px;
+    }
+    main .container .nav-button button {
+        margin: 10px;
+    }
+}

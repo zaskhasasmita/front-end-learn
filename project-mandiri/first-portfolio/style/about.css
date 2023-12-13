@@ -1,0 +1,143 @@
+main.about {
+    margin-top: 60px;
+}
+main.about .container-about {
+    width: 60%;
+    margin-left: 102.7px;
+    /* background-color: yellow; */
+}
+main.about .container-about .title {
+    margin-bottom: 27.5px;
+    /* background-color: aqua; */
+}
+main.about .container-about .title h1 {
+    font-size: 41.6px;
+    font-weight: var(--fw-bold);
+}
+main.about .container-about .line {
+    border: 2px solid #707070;
+    margin-bottom: 27.5px;
+    width: 80%;
+}
+main.about .container-about .bio {
+    font-weight: var(--fw-medium);
+    /* background-color: yellowgreen; */
+    width: 90%;
+    margin-bottom: 40px;
+}
+main.about .container-about .bio p{
+    line-height: 25px;
+    font-size: 16.6px;
+}
+main.about .container-about .resume a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: var(--fw-regular);
+    line-height: 25px;
+    font-size: 18px;
+}
+main.about .zaskha-sasmita img {
+    position: absolute;
+    right: 0;
+    margin-top: -50px;
+    z-index: -9;
+    height: 427.7px;
+    border-radius: 100px 0 0 100px;
+    opacity: .7;
+}
+
+
+/* RESPONSIVE MOBILE */
+
+@media screen and (max-width:729px) {
+    body  {
+        overflow-y: scroll !important;
+        background-repeat: repeat;
+    }
+    main.about {
+        margin-top: 50px !important;
+    }
+    main.about .zaskha-sasmita {
+        position: relative !important;
+        width: 333px !important;
+        height: 349px !important;
+        /* left: 0 !important;
+        right: 0 !important; */
+        /* background-color: red !important; */
+        z-index: -10 !important;
+        margin: auto !important;
+        margin-top: -40px !important;
+        border-radius: 50px 50px 50px 50px !important;
+        overflow: hidden !important;
+    }
+    /* main.about .zaskha-sasmita img {
+        position: absolute !important;
+        /* width: 100% !important; */
+        /* left: 0 !important;
+        right: 0 !important;
+        margin: auto !important;
+        border-radius: 0 0 0 0 !important;
+        margin-top: 0px !important; */
+    } */
+
+    main.about .container-about {
+        width: 85% !important;
+        margin: auto !important;
+        /* background-color: yellow !important; */
+    }
+
+    main.about .container-about .title {
+        margin-bottom: 20px !important;
+        margin-top: 35px !important;
+        /* background-color: aqua !important; */
+    }
+    main.about .container-about .title h1 {
+        font-size: 30px !important;
+    }
+
+    main.about .container-about .line {
+        border: 1px solid #707070 !important;
+        margin-bottom: 20px !important;
+    }
+
+    main.about .container-about .bio {
+        font-weight: var(--fw-medium) !important;
+        /* background-color: yellowgreen !important; */
+        width: 100% !important;
+        margin-bottom: 40px !important;
+    }
+    main.about .container-about .bio p{
+        line-height: 20px !important;
+        font-size: 14px !important;
+    }
+    main.about .container-about .resume{
+        margin-bottom: 70px !important;
+    }
+
+/* RESPONSIVE TABLET */
+
+@media screen and (max-width:992px) {
+    main.about .container-about {
+        width: 60%;
+        margin-left: 40px;
+        /* background-color: yellow; */
+    }
+    main.about .zaskha-sasmita img {
+        position: absolute;
+        right: 0;
+        /* margin-top: 50px; */
+        z-index: -9;
+        /* height: 380px; */
+        border-radius: 100px 0 0 100px;
+        opacity: .7;
+    }
+    main.about .container-about .bio {
+        font-weight: var(--fw-medium) ;
+        width: 80% ;
+        margin-bottom: 40px ;
+    }
+    main.about .container-about .bio p{
+        line-height: 20px ;
+        font-size: 14px;
+    }
+}

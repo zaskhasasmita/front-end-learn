@@ -1,0 +1,91 @@
+main.projects .project-image {
+    /* background-color: red; */
+    border: 5px solid #707070;
+    width: 600px;
+    height: 350px;
+    margin-left: -5px;
+    margin-top: 30px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 50px 50px 0;
+}
+main.projects .project-image img {
+    height: 100%;
+    position: absolute;
+}
+main.projects .container-projects  {
+    width: 43%;
+    margin-top: 20px;
+    margin-right: 100px;
+    right: 0;
+    position: absolute;
+}
+main.projects .container-projects .title {
+    font-size: 41.6px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 27.5px;
+}
+main.projects .container-projects .count {
+    font-size: 30px;
+    font-weight: var(--fw-medium);
+    float: right;
+    margin-top: -60px;
+}
+main.projects .container-projects .line {
+    border: 2px solid #707070;
+    margin-bottom: 0px;
+}
+
+main.projects .container-projects .list-project {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    overflow-x: scroll;
+    height: 310px;
+    
+}
+main.projects .container-projects .list-project .project-item{
+    /* background-color: red; */
+    border-bottom: 1px solid #707070;
+    padding: 30.5px;
+    box-sizing: border-box;
+}
+main.projects .container-projects .list-project .project-item:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+main.projects .container-projects .list-project .project-item .name{
+ float: left;
+ font-size: 22.2px;
+ font-weight: var(--fw-bold);
+}
+main.projects .container-projects .list-project .project-item .category{
+float: right;
+}
+
+/* RESPONSIVE MOBILE */
+
+@media screen and (max-width: 729px) {
+    main.projects .project-image {
+        display: none;
+    }
+    main.projects .container-projects  {
+        width: 85%;
+        margin: auto;
+        position: relative;
+        padding-top: 150px;
+    }
+    main.projects .container-projects .list-project {
+        height: 550px;
+    }
+    main.projects .container-projects .list-project .project-item .name{
+        margin-bottom: 15px;
+    }
+    main.projects .container-projects .list-project .project-item .category{
+        float: left;
+    }
+}

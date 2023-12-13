@@ -1,0 +1,66 @@
+/* CONTACT */
+
+/* title */
+.contact {
+    width: 85%;
+    margin:80px  auto;
+}
+.contact .title{
+    /* background-color: yellow; */
+    font-size: 41.6px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 20px;
+}
+
+/* line */
+.contact .line {
+    border: 2px solid #707070;
+    margin-bottom: 20px;
+}
+
+/* info */
+.contact .info {
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .info .box-mail {
+    /* background-color: lightcoral; */
+    display: flex;
+    column-gap: 30px;
+}
+.contact .info .box-mail .mail-title{
+    font-size: 22.2px;
+    font-weight: var(--fw-bold);
+}
+.contact .info .box-mail .mail-list ul li a{
+    font-size: 22.2px;
+    font-family: inherit;
+    font-weight: var(--fw-regular);
+    color: inherit;
+    text-decoration: none;
+}
+.contact .info .box-mail .mail-list ul li{
+    margin-bottom: 10px;
+}
+
+.contact .info .box-socmed {
+    /* background-color: lightblue; */
+    display: flex;
+    column-gap: 30px;
+}
+.contact .info .box-socmed .socmed-title{
+    font-size: 22.2px;
+    font-weight: var(--fw-bold);
+}
+.contact .info .box-socmed .socmed-list ul li{
+    margin-bottom: 10px;
+}
+.contact .info .box-socmed .socmed-list ul li a{
+    font-size: 22.2px;
+    font-family: inherit;
+    font-weight: var(--fw-regular);
+    color: inherit;
+    text-decoration: none;
+}

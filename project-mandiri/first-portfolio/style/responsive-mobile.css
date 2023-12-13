@@ -1,0 +1,69 @@
+/* 
+///////////////// RESPONSIVE MOBILE /////////////////
+*/
+@media screen and (max-width: 600px) {
+    /* navigation */
+    nav {
+        height: 80px !important;
+    }
+    nav .left-side-nav {
+        padding-left: 30px !important;
+    }
+    nav .right-side-nav {
+        padding-right: 10px !important; /*asdasdasd*/
+    }
+    nav .left-side-nav .logo a {
+        font-size: 25px !important;
+    }
+    nav .right-side-nav .options .lang a {
+        font-size: 18px !important;
+    }
+    nav .right-side-nav .options .mode svg {
+        width: 24px  !important;
+        height: 20px  !important;
+    }
+    nav .right-side-nav .options .burger-icon{
+        /* background-color: red; */
+        width: 25px;
+        height: 25px;
+        margin-right: 15px;
+    }
+    nav .right-side-nav .options .burger-icon .burger-icon-bar{
+        border: 1.5px solid #707070;
+        border: 2px solid #707070;
+    }
+    .close-bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+        background-color: #707070;
+    }
+    .close-bar:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    .close-bar:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -6px);
+        background-color: #707070;
+    }
+
+    /* main */
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: 80px; */
+        /* background-color: red; */
+        height: 100%;
+    }
+    main .container .glance {
+        width: 90% !important;
+    }
+    main .container .nav-button {
+        display: flex !important;
+        flex-direction: column !important;
+        margin-top: 30px !important;
+    }
+    main .container .nav-button button {
+        margin: 10px !important;
+    }
+}
