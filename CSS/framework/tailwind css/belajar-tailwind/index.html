@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Montserrat:wght@600;700;900&display=swap" rel="stylesheet">
+    <title>belajar tailwind</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+                spacing: {
+                    '13': '3.25rem',
+                    '15': '3.75rem',
+                    '128': '32rem',
+                    '144': '36rem',
+                },
+                fontFamily: {
+                    inter : ['Inter'],
+                },
+                colors : {
+                    jek : '#bada55',
+                    kopi : '#c0ffee',
+                }
+            }
+        }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        /* * {
+            border: 1px solid red;
+        } */
+    </style>
+</head>
+<body>
+    <h1 class="text-8xl font-bold text-center my-10">Mari Belajar <span class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">TailwindCSS</span></h1>
+    
+    <section class="mb-10 bg-gradient-to-tr from-indigo-200 via-red-500 to bg-yellow-300">
+        <h2 class="text-3xl text-center ">Spacing</h2>
+        <div class="m-8 ">Margin</div>
+        <div class="p-8 ">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-green-200">
+        <h2 class="text-3xl text-center">Sizing</h2>
+        <div class="w-32 h-32 bg-kopi">Kotak 1</div>
+    </section>
+
+    <section class="mb-96 font-inter max-w-3xl mx-auto">
+        <h2 class="mb-2 text-4xl font-bold">Belajar Mengenai Typography pada TailwindCSS</h2>
+        <div class="mb-4 text-lg text-gray-500">By <a href="#" class="text-gray-700 font-bold">Zaskha sasmita</a>, 22 Agustus 2024</div>
+        <p class="mb-4">Lorem ipsum dolor sit, amet <a href="#" class="underline font-semibold text-blue-600">consectetur</a> adipisicing elit. Fugit dolores itaque, a fuga, dolorem esse nostrum nihil quasi suscipit laboriosam, pariatur asperiores velit excepturi obcaecati sint odit debitis amet accusantium. Quisquam modi soluta dicta inventore et perspiciatis officia aperiam dolor, minus blanditiis rerum nemo nam qui dolorem non dolores suscipit!</p>
+        <blockquote class="mb-4 italic font-thin text-base">" Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consequatur repellendus fugit reiciendis laboriosam molestiae, aliquam nulla reprehenderit architecto consequuntur."</blockquote>
+        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ea quas ex mollitia nesciunt adipisci ipsum aut perferendis, molestiae consectetur ad repellat natus cupiditate, fugit numquam, reiciendis tempora omnis! Eveniet!</p>
+    </section>
+</body>
+</html>
