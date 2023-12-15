@@ -7,48 +7,40 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Montserrat:wght@600;700;900&display=swap" rel="stylesheet">
     <title>belajar tailwind</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script>
-        tailwind.config = {
-        darkMode : 'class',
-        theme: {
-            extend: {
-                spacing: {
-                    '13': '3.25rem',
-                    '15': '3.75rem',
-                    '128': '32rem',
-                    '144': '36rem',
-                },
-                fontFamily: {
-                    inter : ['Inter'],
-                },
-                colors : {
-                    jek : '#bada55',
-                    kopi : '#c0ffee',
-                },
-                animation : {
-                    'spin-lambad' : 'spin 3s linear infinite',
-                    goyangdombret : 'goyang 0.3s ease-in-out infinite'
-                },
-                keyframes : {
-                    'goyang' : {
-                        '0%, 100%' : { transform : 'rotate(-3deg)' }   ,
-                        '50%' : { transform : 'rotate(3deg)' } ,
-                    }
-                }
-            }
-        }
-        }
+        // tailwind.config = {
+        // darkMode : 'class',
+        // theme: {
+        //     extend: {
+        //         spacing: {
+        //             '13': '3.25rem',
+        //             '15': '3.75rem',
+        //             '128': '32rem',
+        //             '144': '36rem',
+        //         },
+        //         fontFamily: {
+        //             inter : ['Inter'],
+        //         },
+        //         colors : {
+        //             jek : '#bada55',
+        //             kopi : '#c0ffee',
+        //         },
+        //         animation : {
+        //             'spin-lambad' : 'spin 3s linear infinite',
+        //             goyangdombret : 'goyang 0.3s ease-in-out infinite'
+        //         },
+        //         keyframes : {
+        //             'goyang' : {
+        //                 '0%, 100%' : { transform : 'rotate(-3deg)' }   ,
+        //                 '50%' : { transform : 'rotate(3deg)' } ,
+        //             }
+        //         }
+        //     }
+        // }
+        // }
     </script>
-    <style type="text/tailwindcss">
-        /* * {
-            border: 1px solid red;
-        } */
-        #toggle:checked ~ label div.toggle-circle {
-            @apply translate-x-3
-        }
-    </style>
 </head>
 <body class="dark:bg-slate-800 dark:text-slate-200">
     <h1 class="text-8xl font-bold text-center my-10">Mari Belajar <span class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">TailwindCSS</span></h1>
@@ -101,7 +93,7 @@
 
     <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-sky-600 active:bg-slate-700 focus:ring ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:bg-slate-100">Simpan</button>
 
-    <div class="max-w-lg my-10 border-slate-200 rounded-xl mx-auto p-5 shadow-md font-inter hover:bg-sky-500 group font-serif dark:hover:bg-slate-300">
+    <div class="max-w-lg my-10 border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-sky-500 group font-serif dark:hover:bg-slate-300">
         <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800 dark:text-slate-300">My Card</h5>
         <p class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800
         dark:text-slate-300">
@@ -233,37 +225,39 @@
         <h2  class=" text-xl font-semibold text-slate-700 md:col-start-4 md:row-start-2 md:flex"><span class="self-center">Welcome Zaskha</span></h2>
         <div class=" text-lg font-bold text-slate-600 md:col-start-2 md:row-start-2 md:flex"><span class="self-end">@zaskhasasmita</span></div>
 
-        <div class="bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 ease-in-out">
-            <div class="w-full h-full bg-[url('https://source.unsplash.com/680x420?a')] bg-cover absolute group-hover:scale-125 transition-all group-hover:rotate-12 duration-500 ease-in-out"></div>
+        <div class="grid-card group">
+            <div class="grid-card-img bg-[url('https://source.unsplash.com/680x420?a')]"></div>
         </div>
-        <div class="bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 ease-in-out md:col-start-3">
-            <div class="w-full h-full bg-[url('https://source.unsplash.com/680x420?b')] bg-cover absolute group-hover:scale-125 transition-all group-hover:rotate-12 duration-500 ease-in-out"></div>
+        <div class="grid-card group md:col-start-3">
+            <div class="grid-card-img bg-[url('https://source.unsplash.com/680x420?b')]"></div>
         </div>
-        <div class="bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 ease-in-out">
-            <div class="w-full h-full bg-[url('https://source.unsplash.com/680x420?c')] bg-cover absolute group-hover:scale-125 transition-all group-hover:rotate-12 duration-500 ease-in-out"></div>
+        <div class="grid-card group">
+            <div class="grid-card-img bg-[url('https://source.unsplash.com/680x420?c')]"></div>
         </div>
-        <div class="bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 ease-in-out">
-            <div class="w-full h-full bg-[url('https://source.unsplash.com/680x420?d')] bg-cover absolute group-hover:scale-125 transition-all group-hover:rotate-12 duration-500 ease-in-out"></div>
+        <div class="grid-card group">
+            <div class="grid-card-img bg-[url('https://source.unsplash.com/680x420?d')]"></div>
         </div>
-        <div class="bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 ease-in-out">
-            <div class="w-full h-full bg-[url('https://source.unsplash.com/680x420?e')] bg-cover absolute group-hover:scale-125 transition-all group-hover:rotate-12 duration-500 ease-in-out"></div>
+        <div class="grid-card group">
+            <div class="grid-card-img bg-[url('https://source.unsplash.com/680x420?e')]"></div>
         </div>
-        <div class="bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 ease-in-out md:col-start-2">
-            <div class="w-full h-full bg-[url('https://source.unsplash.com/680x420?f')] bg-cover absolute group-hover:scale-125 transition-all group-hover:rotate-12 duration-500 ease-in-out"></div>
+        <div class="grid-card group md:col-start-2">
+            <div class="grid-card-img bg-[url('https://source.unsplash.com/680x420?f')]"></div>
         </div>
-        <div class="bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 ease-in-out md:col-start-4">
-            <div class="w-full h-full bg-[url('https://source.unsplash.com/680x420?g')] bg-cover absolute group-hover:scale-125 transition-all group-hover:rotate-12 duration-500 ease-in-out"></div>
+        <div class="grid-card group md:col-start-4">
+            <div class="grid-card-img bg-[url('https://source.unsplash.com/680x420?g')]"></div>
         </div>
-        <div class="bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 ease-in-out">
-            <div class="w-full h-full bg-[url('https://source.unsplash.com/680x420?h')] bg-cover absolute group-hover:scale-125 transition-all group-hover:rotate-12 duration-500 ease-in-out"></div>
+        <div class="grid-card group">
+            <div class="grid-card-img bg-[url('https://source.unsplash.com/680x420?h')]"></div>
         </div>
-        <div class="bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 ease-in-out md:col-start-3">
-            <div class="w-full h-full bg-[url('https://source.unsplash.com/680x420?i')] bg-cover absolute group-hover:scale-125 transition-all group-hover:rotate-12 duration-500 ease-in-out"></div>
+        <div class="grid-card group md:col-start-3">
+            <div class="grid-card-img bg-[url('https://source.unsplash.com/680x420?i')]"></div>
         </div>
-        <div class="bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 ease-in-out md:col-start-3">
-            <div class="w-full h-full bg-[url('https://source.unsplash.com/680x420?j')] bg-cover absolute group-hover:scale-125 transition-all group-hover:rotate-12 duration-500 ease-in-out"></div>
+        <div class="grid-card group md:col-start-3">
+            <div class="grid-card-img bg-[url('https://source.unsplash.com/680x420?j')]"></div>
         </div>
     </div>
+
+    <h1 class="text-6xl">Heloo Zaskhaaaa</h1>
 
     <div class="mb-96"></div>
 

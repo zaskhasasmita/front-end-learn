@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 { 
+        /* font-size: 6rem; */
+        @apply text-8xl;
+        color : theme(colors.jek);
+    }
+}
+
+@layer components {
+    .grid-card {
+        @apply bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden relative hover:scale-95 transition-all duration-500 ease-in-out;
+    }
+
+    .grid-card-img {
+        @apply w-full h-full bg-cover absolute group-hover:scale-125 transition-all group-hover:rotate-12 duration-500 ease-in-out;
+    }
+}
+
+@layer utilities {
+    #toggle:checked ~ label div.toggle-circle {
+        @apply translate-x-3
+    }
+}
+
+/* @apply : kalo kita punya kelas custom tapi mau pake utility tw, pakailah @apply*/
+/* @apply juga bisa dipake ketika kita mau bikin komponen */
