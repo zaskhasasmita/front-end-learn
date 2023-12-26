@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class CounterIteratorResult {
+            constructor(value, done) {
+                this.value = value;
+                this.done = done;
+            }
+        }
+
+        class CounterIterator {
+            constructor(value, max) {
+                this.value = value;
+                this.max = max;
+            }
+
+            next() {
+                try {
+                    if(this.value > this.max) {
+                        return new CounterIteratorResult(this.value, true);
+                    } else {
+                        return new CounterIteratorResult(this.value, false)
+                    }
+                } finally {
+                    this.value++;
+                }
+            }
+        }
+
+        class Counter {
+            constructor(value, max) {
+                this.value = value;
+                this.max = max;
+            }
+
+            [Symbol.iterator]() {
+                return new CounterIterator(this.value, this.max)
+            }
+        }
+
+        // gunakan
+        const counter = new Counter(1, 10)
+        for (const element of counter) {
+            console.info(element)
+        }
+
+
+
+
+        // const iterableArray = [1,2,3,4,5];
+
+        // // mennggunakan iterator untuk mengakses nilai-nilai dalam iterable 
+        // const iterator = iterableArray[Symbol.iterator]();
+
+        // // console.log(iterator.next());
+        // // console.log(iterator.next());
+        // // console.log(iterator.next());
+        // // console.log(iterator.next());
+        // // console.log(iterator.next());
+        // // console.log(iterator.next());
+
+        // const myIterator = {
+        //     data : [1,2,3,4,5],
+        //     index : 0,
+        //     next : function() {
+        //                 return this.data < this.data.length ? { value: this.data[this.index++], done : false }
+        //                 : {done : true};
+        //             }
+        // }
+
+        // console.log(myIterator.next());
+        // console.log(myIterator.next());
+        // console.log(myIterator.next());
+        // console.log(myIterator.next());
+
+    </script>
+</body>
+</html>

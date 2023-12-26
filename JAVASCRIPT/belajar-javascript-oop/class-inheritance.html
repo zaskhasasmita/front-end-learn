@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ingerit</title>
+</head>
+<body>
+    <script>
+
+        class Employee {
+            sayHello(name) {
+                console.info(`Hi ${name}, nama saya Employee ${this.name}`)
+            }
+        }
+
+        class Manager extends Employee {
+            sayHello(name) {
+                console.info(`Hi ${name}, nama saya Manager ${this.name}`)
+            }
+        }
+
+        const zaskha = new Employee()
+        zaskha.name = "Zaskha"
+        zaskha.sayHello('asep')
+
+        const asgar = new Manager()
+        asgar.name = "asgar"
+        asgar.sayHello('asep')
+
+        console.info(zaskha)
+        console.info(asgar)
+    
+    </script>
+</body>
+</html>

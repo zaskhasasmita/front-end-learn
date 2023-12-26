@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class private field</title>
+</head>
+<body>
+    <script>
+
+        class Counter {
+            #counter = 0;
+
+            increment() {
+                this.#counter++;
+            }
+            
+            decrement() {
+                this.#counter--;
+            }
+
+            get() {
+                return this.#counter;
+            }
+        }
+
+        const counter = new Counter();
+
+        counter.increment()
+        counter.increment()
+        counter.increment()
+        counter.increment()
+        counter.increment()
+
+        console.info(counter.get())
+        console.info(counter)
+
+    </script>
+</body>
+</html>

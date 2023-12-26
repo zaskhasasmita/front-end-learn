@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instance</title>
+    <style>
+        .highlight {
+          color: red;
+          font-weight: bold;
+        }
+      </style>
+</head>
+<body>
+
+    <div id="myElement">Ini adalah elemen</div>
+
+    <script>
+        // Kelas (Class) sebagai Cetakan Pabrik
+        class ElementManipulator {
+        constructor(elementId) {
+            this.element = document.getElementById(elementId);
+        }
+
+        highlight() {
+            this.element.classList.add('highlight');
+        }
+
+        unhighlight() {
+            this.element.classList.remove('highlight');
+        }
+
+        setText(newText) {
+            this.element.textContent = newText;
+        }
+        }
+
+        // Objek sebagai Produk yang Dicetak dari Pabrik
+        const myElementManipulator = new ElementManipulator('myElement');
+
+        // Menggunakan objek yang telah dibuat untuk memanipulasi DOM
+        myElementManipulator.highlight();
+        // myElementManipulator.unhighlight();
+        myElementManipulator.setText('Ini adalah elemen yang telah diubah.');
+
+
+
+        // /////////////////////////////////////////////////////////////////////
+
+        class Employee {
+
+        }
+
+        class Manager {
+
+        }
+
+        const zaskha = new Employee()
+        const argus = new Manager()
+
+        console.info(zaskha instanceof Employee) //true
+        console.info(zaskha instanceof Manager) // false
+
+        console.info(argus instanceof Employee) // false //bakal true kalo Manager Extends Employee
+        console.info(argus instanceof Manager) // true
+
+    </script>
+</body>
+</html>

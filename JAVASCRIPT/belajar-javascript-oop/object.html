@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        // const zaskha = {
+        //     firstName : 'Zaskha'
+        // }
+
+        // const asgar = {
+        //     namaDepan : 'asgar'
+        // }
+
+        // car lama bikin constructor function
+        function Person(firstName, lastName) {
+            this.firstName = firstName
+            this.lastName = lastName
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, my name is ${this.firstName}`)
+            }
+        }
+        
+        const zaskha = new Person('Zaskha', 'Sasmita');
+        zaskha.sayHello('abang');
+        
+        const asgar = new Person('Asgar', 'Bagong');
+        asgar.sayHello('abang');
+
+        console.log(zaskha);
+        console.log(asgar);
+
+
+        // // bikin object
+        // const zaskha = new Person();
+        // zaskha.firstName = "Zaskha"
+        // zaskha.lastName = "Sasmita"
+        // zaskha.sayHello('abang');
+        
+        // const asgar = new Person();
+        // asgar.firstName = "asgar"
+        // asgar.lastName = "bagong"
+        // asgar.sayHello('abang');
+
+        // console.log(zaskha);
+        // console.log(asgar);
+    </script>
+</body>
+</html>

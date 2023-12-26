@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proto Inherit</title>
+</head>
+<body>
+    <script>
+
+        function Employee(name) {
+            this.name = name;
+        }
+        function Manager(name) {
+            this.name = name;
+        }
+        
+        // //ini cara Prototype Inheritance yang salah
+        // Manager.prototype = Employee.prototype;
+
+        // //ini cara Prototype Inheritance yang benar
+        Manager.prototype = Object.create(Employee.prototype);
+
+        Manager.prototype.sayHello = function (name) {
+            console.info(`Hello ${name}, my name is manager ${this.name}`)
+        }
+        Employee.prototype.sayHello = function (name) {
+            console.info(`Hello ${name}, my name is employee ${this.name}`)
+        }
+
+        const employee = new Employee("agus")
+        employee.sayHello('asep')
+
+        const manager = new Manager('Tatang')
+        manager.sayHello('asep')
+
+        console.info(employee)
+        console.info(manager)
+
+    </script>
+</body>
+</html>
